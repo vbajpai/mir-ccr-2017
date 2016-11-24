@@ -1,0 +1,95 @@
+\documentclass{sigcomm-alternate}
+\pdfpagewidth=8.5in
+\pdfpageheight=11in
+
+% added by Vaibhav
+%----------------------------------------------------------------------
+\usepackage{cite}
+\usepackage[utf8]{inputenc}
+\usepackage[table]{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage[nolist]{acronym}
+\usepackage{url}
+\usepackage{todonotes}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage[font=footnotesize,caption=false]{subfig}
+\usepackage[multiple]{footmisc}
+\usepackage{color,soul}
+\usepackage{amsfonts}
+\usepackage{epigraph}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+
+\definecolor{gray}{gray}{0.93}
+%----------------------------------------------------------------------
+
+\input{acronyms.tex}
+\begin{document}
+
+\title{Munich Internet Research Retreat}
+
+%\numberofauthors{1}
+%\author{
+%\begin{tabular*}{0.9\textwidth}%
+%{@{\extracolsep{\fill}}ccc}
+%Vaibhav Bajpai & Arthur W. Berger & Philip Eardley \\
+%\affaddr{Jacobs University} & \affaddr{Akamai Technologies} & \affaddr{British Telecom R\&D} \\
+%\affaddr{Bremen, DE} & \affaddr{Cambridge, US} & \affaddr{Ipswich, GB} \\
+%\email{v.bajpai@jacobs-university.de} & \email{awberger@csail.mit.edu} & \email{philip.eardley@bt.com}
+%\end{tabular*}\\
+%\begin{tabular}{c}
+%\end{tabular}\\
+%\begin{tabular*}{0.6\textwidth}%
+%{@{\extracolsep{\fill}}cc}
+%Jörg Ott & Jürgen Schönwälder \\
+%\affaddr{TU München} & \affaddr{Jacobs University} \\
+%\affaddr{München, DE} & \affaddr{Bremen, DE} \\
+%\email{ott@in.tum.de} & \email{j.schoenwaelder@jacobs-university.de}
+%\end{tabular*}\\
+%\begin{tabular}{c}
+%\end{tabular}\\
+%\begin{tabular}{c}
+%{\normalsize This article is an editorial note submitted to CCR. It has NOT
+%been peer reviewed.}\\
+%{\normalsize The authors take full responsibility for this article's
+%technical content. Comments can be posted through CCR Online.}
+%\end{tabular}
+%}
+
+\maketitle
+
+\begin{abstract}
+
+This article summarises a 2 day long research retreat seminar on  held in
+November 2016.  The entire set of presentations delivered during the seminar
+is made publicly available at \cite{dagstuhl-materials}.
+
+\end{abstract}
+
+% referrred: http://www.acm.org/about/class/ccs98-html
+%\category{C.2.3}{Computer-Communication Networks}{Network Operations}[Network
+%monitoring]
+
+% referred: http://www.acm.org/sigs/publications/sigguide-v2.2sp
+%\terms{Measurement, Performance}
+
+\keywords{Internet measurements, Quality of experience, Network management,
+Traffic engineering}
+
+% sections
+%----------------------------------------------------------------------
+\input{sections/introduction}
+\input{sections/invited-presentations}
+\input{sections/parallel-group-work}
+\input{sections/lightning-talks}
+\input{sections/conclusion}
+\input{sections/acknowledgements}
+%----------------------------------------------------------------------
+
+% bibliography
+%----------------------------------------------------------------------
+\bibliographystyle{abbrv}
+\bibliography{index}
+%----------------------------------------------------------------------
+
+\end{document}
