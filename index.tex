@@ -1,68 +1,235 @@
-\documentclass{sigcomm-alternate}
-\pdfpagewidth=8.5in
-\pdfpageheight=11in
+%!TEX root = index.tex
+%^^^^^^^^^^^^^^^^^^^^^^^^^^^
+% make this the first line of all documents that are \include'd
 
-% added by Vaibhav
-%----------------------------------------------------------------------
-\usepackage{cite}
+% warn about incorrect/obsolete latex (yes, this goes before \documentclass)
+\RequirePackage[l2tabu, orthodox, experimental]{nag}
+% \PassOptionsToPackage{pdfpagelabels=false}{hyperref}
+\documentclass{sig-alternate}
+
 \usepackage[utf8]{inputenc}
-\usepackage[table]{xcolor}
-\usepackage[T1]{fontenc}
-\usepackage[nolist]{acronym}
+\usepackage[english]{babel}
+
+% you need to install 0.3 or newer of https://github.com/moewew/biblatex-trad
+% in order to use trad-abbrv below:
+\usepackage[backend=biber, style=trad-abbrv, giveninits=true, maxnames=99]{biblatex}
+% this is necessary for weird error in bib
+\usepackage[textsize=tiny]{todonotes}
+\usepackage[
+  pass,% keep layout unchanged
+  % showframe,% show the layout
+]{geometry}
+
+\usepackage{microtype}
+\usepackage{newtxtext}
 \usepackage{url}
-\usepackage{todonotes}
-\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{bookmark}
+\usepackage{xcolor}
+\usepackage{acronym}
+\usepackage{subcaption}
+\usepackage{tabularx}
+% \usepackage{tabulary}
+\usepackage{enumitem}
+\usepackage{multirow}
 \usepackage{listings}
-\usepackage[font=footnotesize,caption=false]{subfig}
-\usepackage[multiple]{footmisc}
-\usepackage{color,soul}
-\usepackage{amsfonts}
-\usepackage{epigraph}
-\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\usepackage{xspace}
+\usepackage{comment}
+% \usepackage{acmcopyright}
+\usepackage{booktabs}
 
-\definecolor{gray}{gray}{0.93}
-%----------------------------------------------------------------------
+% let us use normal quotes and make them pretty
+\usepackage[autostyle=true,english=american]{csquotes}
+% \MakeOuterQuote{"}
 
-\input{acronyms.tex}
+% try harder to prevent widows and orphans
+\widowpenalty=10000
+\clubpenalty=10000
+
+% fix hpyhenation of these words
+\hyphenation{NetFPGA}
+
+% make captions bold with subcaption
+%\captionsetup{labelfont={bf}, textfont={bf}, singlelinecheck=off, justification=centering}
+\captionsetup{labelfont={bf}, textfont={bf}, singlelinecheck=off}
+
+% set up siunitx
+\sisetup{detect-all=true, binary-units, free-standing-units, range-units=single}
+
+% don't use typewriter font for URLs
+\urlstyle{same}
+
+% prefixes for \autoref
+\AtBeginDocument{
+\renewcommand{\sectionautorefname}{Section}
+\renewcommand{\subsectionautorefname}{Section}
+\renewcommand{\subsectionautorefname}{Section}
+}
+
+% highlight missing references and citations with red background
+\makeatletter
+\patchcmd{\@setref}{\bfseries??}{\colorbox{red!30}{\detokenize{#3}}}{}{}
+\def\abx@missing#1{\colorbox{red!30}{\detokenize{#1}}}
+\makeatother
+
+% the bibliography is here
+\addbibresource{index.bib}
+
+% transmogrify the bibliography:
+% 1. don't show various fields such as ISBNs, etc.
+\AtEveryBibitem{\clearfield{isbn}}
+\AtEveryBibitem{\clearfield{issn}}
+\AtEveryBibitem{\clearlist{institution}}
+\AtEveryBibitem{\clearfield{doi}}
+% \AtEveryBibitem{\clearfield{url}}
+\AtEveryBibitem{\clearlist{publisher}}
+% \AtEveryBibitem{\clearlist{location}}
+\AtEveryBibitem{\clearfield{series}}
+\AtEveryBibitem{\clearfield{note}}
+% \AtEveryBibitem{\clearfield{pages}}
+\AtEveryBibitem{\clearfield{pagetotal}}
+\AtEveryBibitem{\clearfield{volume}}
+\AtEveryBibitem{
+        \ifboolexpr{test {\ifentrytype{article}}}{\clearfield{number}}{}
+        \ifboolexpr{not test {\ifentrytype{misc}}}{\clearfield{url}}{}
+}
+% 2. other transforms
+\DeclareSourcemap{
+        \maps[datatype=bibtex]{
+                \map{
+                        % shorten conferences
+                        \step[fieldsource=booktitle,
+                                match={.*Internet Measurement Conference.*},
+                                replace={Proc. ACM IMC}]
+                        \step[fieldsource=booktitle,
+                                match={.*Networked Systems Design and Implementation.*},
+                                replace={Proc. USENIX NSDI}]
+                        \step[fieldsource=booktitle,
+                                match={.*Hot Topics in Networks.*},
+                                replace={Proc. ACM HotNets}]
+                        \step[fieldsource=booktitle,
+                                match={.*Operating Systems Design and Implementation.*},
+                                replace={Proc. USENIX OSDI}]
+                        \step[fieldsource=booktitle,
+                                match={.*USENIX Annual Technical Conference.*},
+                                replace={Proc. USENIX ATC}]
+                        \step[fieldsource=booktitle,
+                                match={.*USENIX Conference on File and Storage Technologies.*},
+                                replace={Proc. USENIX FAST}]
+                        \step[fieldsource=booktitle,
+                                match={.*European Conference on Computer Systems.*},
+                                replace={Proc. ACM EuroSys}]
+                        \step[fieldsource=booktitle,
+                                match={.*Symposium on Operating Systems Principles.*},
+                                replace={Proc. ACM SOSP}]
+                        \step[fieldsource=booktitle,
+                                match={.*(USENIX Security Symposium|USENIX Conference on Security).*},
+                                replace={Proc. USENIX Security}]
+                        \step[fieldsource=booktitle,
+                                match={.*USENIX Symposium on Internet Technologies and Systems.*},
+                                replace={Proc. USENIX USITS}]
+                        \step[fieldsource=booktitle,
+                                match={.*Emerging Networking E.periments and Technologies.*},
+                                replace={Proc. ACM CoNEXT}]
+                        \step[fieldsource=booktitle,
+                                match={.*INFOCOM.*},
+                                replace={Proc. IEEE Infocom}]
+                        \step[fieldsource=booktitle,
+                                match={.*Roedunet.*},
+                                replace={Proc. IEEE RoEduNet}]
+                        \step[fieldsource=booktitle,
+                                match={.*Architectural Support for Programming Languages and Operating Systems.*},
+                                replace={Proc. ACM ASPLOS}]
+                        \step[fieldsource=booktitle,
+                                match={.*Symposium on Software Defined Networking Research.*},
+                                replace={Proc. ACM SOSR}]
+                        \step[fieldsource=booktitle,
+                                match={.*Architectures? for Networking and Communications Systems.*},
+                                replace={Proc. ACM ANCS}]
+                        \step[fieldsource=booktitle,
+                                match={.*SIGMOD International Conference on Management of Data.*},
+                                replace={Proc. ACM SIGMOD}]
+                        % keep this last
+                        \step[fieldsource=booktitle,
+                                match={.*(SIGCOMM|Special Interest Group on Data Communication|Applications, Technologies, Architectures, and Protocols|Communications Architectures and Protocols).*},
+                                replace={Proc. ACM SIGCOMM}]
+                        % shorten journals
+                        \step[fieldsource=journal,
+                                match={.*IEEE Journal on Selected Areas in Communication.*},
+                                replace={IEEE JSAC}]
+                        \step[fieldsource=journal,
+                                match={.*Comput. Commun. Rev..*},
+                                replace={ACM SIGCOMM CCR}]
+                }
+        }
+}
+% 3. skip the "In:" for @inproceedings and change some month abbreviations
+% 3. skip the "In:" for @inproceedings and change some month abbreviations
+\DefineBibliographyStrings{english}{
+        in               = {},
+        page             = {p\adddot},
+        pages            = {pp\adddot},
+        june             = {Jun\adddot},
+        july             = {Jul\adddot},
+        september        = {Sep\adddot},
+}
+
+\hypersetup{pdffitwindow=true,pdfpagelayout=SinglePage,pdfpagemode=UseThumbs}
+
+\setlength\paperheight{11in}
+\setlength\paperwidth{8.5in}
+\setlength{\textwidth}{7in}
+\setlength{\textheight}{9.25in}
+\setlength{\oddsidemargin}{-.25in}
+\setlength{\evensidemargin}{-.25in}
+
+% \input{acronyms.tex}
 \begin{document}
 
 \title{Munich Internet Research Retreat 2016}
 
-%\numberofauthors{1}
-%\author{
-%\begin{tabular*}{0.9\textwidth}%
-%{@{\extracolsep{\fill}}ccc}
-%Vaibhav Bajpai & Arthur W. Berger & Philip Eardley \\
-%\affaddr{Jacobs University} & \affaddr{Akamai Technologies} & \affaddr{British Telecom R\&D} \\
-%\affaddr{Bremen, DE} & \affaddr{Cambridge, US} & \affaddr{Ipswich, GB} \\
-%\email{v.bajpai@jacobs-university.de} & \email{awberger@csail.mit.edu} & \email{philip.eardley@bt.com}
+\numberofauthors{1}
+\author{
+%\begin{tabular*}{0.50\textwidth}%
+%{@{\extracolsep{50pt}}cc}
+%Georg Carle & Lars Eggert \\
+%\affaddr{TU Munich} & \affaddr{NetApp} \\
+%%\affaddr{Munich, DE} & \affaddr{Munich, DE} \\
+%\email{carle@in.tum.de} & \email{lars@netapp.com}
 %\end{tabular*}\\
 %\begin{tabular}{c}
 %\end{tabular}\\
-%\begin{tabular*}{0.6\textwidth}%
-%{@{\extracolsep{\fill}}cc}
-%Jörg Ott & Jürgen Schönwälder \\
-%\affaddr{TU München} & \affaddr{Jacobs University} \\
-%\affaddr{München, DE} & \affaddr{Bremen, DE} \\
-%\email{ott@in.tum.de} & \email{j.schoenwaelder@jacobs-university.de}
+%\begin{tabular*}{0.60\textwidth}%
+%{@{\extracolsep{35pt}}cc}
+%Wolfgang Kellerer & Jörg Ott \\
+%\affaddr{TU Munich} & \affaddr{TU Munich} \\
+%%\affaddr{Munich, DE} & \affaddr{Munich, DE} \\
+%\email{wolfgang.kellerer@tum.de} & \email{ott@in.tum.de}
 %\end{tabular*}\\
 %\begin{tabular}{c}
 %\end{tabular}\\
-%\begin{tabular}{c}
-%{\normalsize This article is an editorial note submitted to CCR. It has NOT
-%been peer reviewed.}\\
-%{\normalsize The authors take full responsibility for this article's
-%technical content. Comments can be posted through CCR Online.}
-%\end{tabular}
-%}
+\begin{tabular}{c}
+{\normalsize This article is an editorial note submitted to CCR. It has NOT
+been peer reviewed.}\\
+{\normalsize The authors take full responsibility for this article's
+technical content. Comments can be posted through CCR Online.}
+\end{tabular}
+}
 
 \maketitle
 
 \begin{abstract}
 
-This article summarises a 2 day long research retreat seminar on  held in
-November 2016.  The entire set of presentations delivered during the seminar
-is made publicly available at \cite{mir-materials}.
+This article summarises a 2 day long Munich Internet Research Retreat held in
+November 2016.  The goal of the retreat was to provide a forum for both
+academic and industrial researchers to exchange ideas and get feedback on
+their current work. It was organized in a spirit that is similar to an highly
+interactive Dagstuhl seminars, with a very limited number of full-length
+talks, while dedicating most of the time to poster sessions, panels and group
+discussions. The entire set of presentations delivered during the seminar is
+made publicly available at \cite{mir-materials}.
 
 \end{abstract}
 
@@ -73,24 +240,22 @@ is made publicly available at \cite{mir-materials}.
 % referred: http://www.acm.org/sigs/publications/sigguide-v2.2sp
 %\terms{Measurement, Performance}
 
-\keywords{Internet measurements, Quality of experience, Network management,
-Traffic engineering}
+\keywords{SDN, NFV, Security, IoT, Internet measurements}
 
 % sections
 %----------------------------------------------------------------------
 \input{sections/introduction}
 \input{sections/invited-presentations}
 \input{sections/parallel-group-work}
-\input{sections/lightning-talks}
 \input{sections/posters}
 \input{sections/conclusion}
 \input{sections/acknowledgements}
 %----------------------------------------------------------------------
 
 % bibliography
-%----------------------------------------------------------------------
-\bibliographystyle{abbrv}
-\bibliography{index}
-%----------------------------------------------------------------------
+
+\AtNextBibliography{\small}
+\setlength\bibitemsep{2pt}
+\printbibliography[title=REFERENCES, heading=bibnumbered]
 
 \end{document}
