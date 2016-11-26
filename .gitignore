@@ -1,0 +1,13 @@
+*.out
+*.toc
+*.log
+*.blg
+*.aux
+*.lof
+*.lot
+*.fls
+*.fmt
+*.fot
+*.cb
+*.cb2
+*.bcf
