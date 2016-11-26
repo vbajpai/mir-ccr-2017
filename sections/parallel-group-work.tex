@@ -39,5 +39,17 @@ Another need for improvement is the development of a clear transition path from 
 % ------------- Alexander von Gernler
 \subsection{Security}
 
+The security breakout session covered civil liberties and privacy.
+
+Firstly, the group set its focus and decided not to discuss the topics of trustworthy hardware or civil liberties, but instead to concentrate on SDN security and problems of cloudification
+
+Key results: 1) Customer networks are converging:  Customers want less own hardware, and want to be more independent and to lease remote services and equipment rather than owning it. 
+2) Virtualization (which happens when you cloudify applications) amplifies known problems in traditional fields like security, trust, verifiability or visibility.
+3) A special challenge is the cloudification of services that already utilize virtualization in the traditional model, for example sandboxes that analyze malware.  For a cloud case, one would end up with nested virtualization, which in turn comes with even new problems concerning performance and visibility of the virtualization to the malware being inspected
+4) Encryption of data still leads to the usability of cloud scenarios being reduced to mostly SaaS, because homomorphic encryption is still not there to solve these problems
+5) Special problems with end-to-end security, e.g., 
+there is more end-to-end encryption happening, which is good.  As a downside however, it makes life harder for people inspecting traffic in the middle
+If termination of encrypted connections is done in the cloud, there will be an unencrypted last mile as new security issue arising from this scenario. 
+
 % ------------- Aaron
 \subsection{IoT}
