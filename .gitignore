@@ -11,3 +11,6 @@
 *.cb
 *.cb2
 *.bcf
+index.bbl
+index.fdb_latexmk
+index.run.xml
