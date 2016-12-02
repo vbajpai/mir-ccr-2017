@@ -32,10 +32,19 @@ and identifying areas for group work.
 % ------------ Minoo Ruohi
 \subsection{Path tracing and validation of IPv4 and IPv6 siblings}
 
+With the growing deployment of IPv6, the question arises whether and to what extent this new protocol is co-deployed with IPv4 on existing hardware or whether new hardware or proxy solutions are deployed. Understanding the resulting cross-dependencies between IPv4 and IPv6 hosts will add a significant level of insight into Internet structure and resilience research. In this talk, Minoo Ruohi from TUM presented an active measurement technique to determine whether an IPv4-IPv6 address pair resides on the same physical host. The measurement technique is based on measuring clock skew through TCP timestamps, and introduces new capabilities to classify nonlinear clock skews. in their studies, they achieve 97.7\% accuracy on a ground truth data set of 458 hosts and have proved this technique's value by applying it to 371k sibling candidates, of which they classify 80k as siblings. A technical report on this work has been published~\cite{Scheitle2016}. Further, the classified siblings as well as additional data and all code from this work have been released for public use~\footnote{}.
+
 
 % ------------ Laurent Vanbever
 \subsection{SWIFT: Predictive Fast Reroute upon Remote BGP Disruptions}
 
+Fast rerouting upon network failure is a key requirement when it comes to meet stringent service-level agreements. While current frameworks enable sub-second convergence upon local failures, they do not protect against the much frequent remote failures. In contrast to local failures, learning about a remote failure is fundamentally slower as it involves receiving potentially hundred of thousands of BGP messages. Also, pre-populating backup forwarding rules is impossible as any subset of the prefixes can be impacted.
+
+In this presentation, Laurent Vanbever from the ETH Zurich presented SWIFT, a general fast re- route framework supporting both local and remote failures~\cite{}. SWIFT is based on two novel techniques. First, SWIFT copes with slow notification by predicting the overall extent of a remote failure out of few control-plane (BGP) messages. Second, SWIFT introduces a new data- plane encoding scheme which enables it to quickly and flexibly update the impacted forwarding entries.
+
+SWIFT have been implemented by the ETH Networked Systems Group (NSG) and its performance benefits have been demonstrated by showing that: i) SWIFT is able to predict the extent of a remote failure with high accuracy (?93\%); and ii) SWIFT encoding scheme enables to fast-converge more than 95\% of the impacted forwarding entries. Overall, SWIFT reduces the average convergence time from few minutes to few seconds.
+
+%\footnote{http://synet.ethz.ch/}
 
 % ------------ Christian Prehofer
 \subsection{Open Platforms for Cyber-physical systems}
@@ -43,5 +52,7 @@ and identifying areas for group work.
 
 % ------------ Holger Kinkelin
 \subsection{Collaborative intrusion handling using the Blackboard-Pattern}
+
+Defending computer networks from ongoing security incidents is a key requirement to ensure service continuity. Handling incidents is a complex process consisting of the three steps: 1) intrusion detection, 2) alert processing and 3) intrusion response. For useful and automated incident handling a comprehensive view on the process and tightly interleaved single steps are required. Existing solutions for incident handling merely focus on a single step leaving the other steps completely aside. Incompatible and encapsulated partial solutions are the consequence. In this talk Holger Kinkelin proposed an approach on incident handling based on a novel execution model that allows interleaving and collaborative interaction between the incident handling steps using the Blackboard Pattern. Their holistic information model lays the foundation for a conflict free collaboration. The incident handling steps are further segmented into exchangeable functional blocks distributed across the network. To show the applicability of their approach, typical use cases for incident handling systems were identified and tested based on their implementation. This talk was based on a paper published at WISCS associated to ACM CCS 2016~\cite{Herold2016}.
 
 
