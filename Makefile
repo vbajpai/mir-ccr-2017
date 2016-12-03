@@ -3,6 +3,10 @@ all: build make
 build:
 	latexmk -pvc -f -pdf index.tex
 
+fetch:
+	rm -rf rfc.bib && curl -O http://tm.uka.de/~bless/rfc.bib
+	rm -rf id.bib && curl -O http://cnds.eecs.jacobs-university.de/users/vbajpai/id2bib/id.bib
+
 clean:
 	latexmk -c
 	find . -iname "*converted-to.pdf*" -delete
