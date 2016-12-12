@@ -11,8 +11,20 @@ and identifying areas for group work.
 
 
 % ------------ Alexander von Gemler
-\subsection{Towards A Clean Slate -- Digital Sovereignty in the Post Snowden Era}
-\todo[inline]{Alexander von Gemler}
+%\subsection{Towards A Clean Slate -- Digital Sovereignty in the Post Snowden Era}
+\subsection{Digital Sovereignty in the Post Snowden Era}
+
+In this talk, Alexander von Gemler (genua GmbH) emphasizes the need for the
+availability of trustworthy hardware and trustworthy operating systems for the
+common user.  The postulation is that without these means, democracy itself
+will suffer in the long run, as people need not only to be unwatched and
+uncensored when pursuing their forming and expressing of political opinion,
+but they also need to feel unwatched and uncensored.  If these prerequisites
+are not met, chilling effects will occur, and the users will adjust their
+behaviour to whatever they think is socially appropriate.  The talk finishes
+by enumerating some possible ways out of the situation, and appeals to the
+conscience of the computer scientists around, as they are needed to explain
+the problem to society, and ultimately solve it.
 
 
 % ------------ Artur Hecker
@@ -49,8 +61,20 @@ and gives an illustrative example with \ac{SDN} controller placement.
 
 % ------------ Brian Trammell
 \subsection{An Accidental Internet Architecture}
-\todo[inline]{Brian Trammell}
 
+The Internet, as seen from the point of view of the applications, services,
+and user agents it connects, is defined by the interfaces it provides. Brian
+Trammell (ETH Zürich) in this talk, introduced PostSockets
+\cite{draft-trammell-post-sockets}, a work-in-progress proposal to reimagine
+the Internet from a new API down. PostSockets provides for secure,
+message-oriented, explicitly multipath, asynchonous communication.  It
+separates long-term state (cryptographic identity and resumption parameters)
+from ephemeral per-path state (transport connection windows, session secrets),
+and is suitable both for reliable message stream transports (such as QUIC for
+HTTP/2) as well as for partially-reliable media applications. PostSockets is
+intended to allow applications to be developed separate from (possibly
+runtime-bound) transport protocol dynamics, in turn accelerating the
+deployment of recent innovations at Layer 4
 
 % ------------ Vaibhav Bajpai
 \subsection{Measuring IPv6 Performance}
