@@ -7,7 +7,31 @@ smaller groups. This section summarises the discussions of each group.
 
 % ------------- Andreas Blenk (TUM LKN)
 \subsection{SDN/NFV Measurements}
-\todo[inline]{Andreas Blenk}
+
+With the introduction of \ac{SDN}, \ac{NV}, and \ac{NFV}, the programmability
+and flexibility of our networks is promised to increase. With these new
+concepts, networking tasks will be pushed on commodity hardware where they are
+programmed as software.  However, this introduces new uncertainties in the
+provided performance of these next generation networks as, in particular,
+commodity hardware and software are not designed network processing.
+Accordingly, new sophisticated measurement procedures are needed to benchmark
+hardware and software components when faced with network packet processing.
+Besides, as virtualization introduces an abstraction layer, this might come
+with a performance overhead that needs to be considered and quantified. For
+this purpose, existing measurement tools, such as MoonGen
+\cite{pemmerich:imc:2015}, could be used to evaluate the performance for high
+data rate with accurate precision.  Furthermore, tools designed for measuring
+non-virtualized and virtualized \ac{SDN} networks (such as perfbench) could
+measure the overhead of virtualization components, such as network
+hypervisors. Measurements should be conducted on software platforms as well as
+real networking testbeds. Hence, testbeds need to be built that include
+commodity servers, e.g., making use of accelerated network cards via
+\ac{DPDK}, networking functions in software, e.g., functions running in docker
+containers, orchestration tools for virtual environments, e.g., HyperFlex
+\cite{ablenk:im:2015} and OpenStack, as well as hardware that can generate
+realistic network traffic, e.g., Spirent Test Center.  Generally, the
+performance evaluation of virtualized networks and SDN networks is an
+important task for the design of future communication networks.
 
 % ------------- Georg Carle
 \subsection{SDN++: Applications Perspective}
@@ -83,7 +107,18 @@ specification \cite{draft-ietf-quic-transport} with IETF consensus.
 
 % ------------- Johannes Naab / Heiko Niedermayer
 \subsection{DDoS Defence beyond Centralization}
-\todo[inline]{Johannes Naab / Heiko Niedermayer}
+
+The danger of \ac{DDoS} attacks makes web services buy services of a few large
+companies, such as Akamai or Cloudflare. Usually, this comes with a loss of
+control on the side of the web service over defensive measures, e.g. blocking
+which connections. Furthermore, we believe that this centralization of the
+Internet is threatening the freedom of the Internet as users cannot bypass the
+use of services of certain companies anymore. They lose their authority to
+select the ones they want. In order to overcome this problem, we propose to
+make \ac{DDoS} protection a service of ISPs to web services and in further
+steps between ISPs and IXPs. If a web service is in trouble. It can alarm its
+ISP and it can influence connections blocked by the ISP on its behalf. Details
+need further research.
 
 % ------------- Alexander von Gernler
 \subsection{Security}
