@@ -157,10 +157,38 @@ firewall which aims at a cost reduction in terms of computation resources
 needed for scaling and latency imposed by the rerouting.
 
 \subsection{Securebox}
-\todo[inline]{TBA}
+
+Securebox is an affordable and deployable platform for 
+securing and managing IoT networks. This proposal 
+targets an alarming spot in the fast growing IoT industry where 
+security is often overlooked due to device limitation, budget 
+constraint, and development deadline. In contrast to existing 
+host-centric and hardware-coupled solutions, it empowers 
+a cloud-assisted model dedicated to budget and resource 
+constrained IoT networks. Securebox allows us to 
+1) flexibly offload and onload security and management functions to the cloud and network edge components; 2) offer advanced security and management 
+services to end users in an affordable and on-demand manner; 
+3) ease the upgrade and deployment of new services to guard 
+against abrupt security breakouts. The current 
+implementation of Securebox consists of a plug-n-play 
+frontend, a Kubernetes-powered backend cluster, and a smartphone 
+mobile application. The testbed evaluation shows that 
+Securebox is robust and responsive. Its collaborative and 
+extensible architecture enforces rapid update cycles and can 
+scale with the growing diversity of IoT devices.
 
 \subsection{StackMap}
-\todo[inline]{TBA}
+
+StackMap leverages the best aspects of kernel-bypass networking 
+into a new low-latency OS network service based on the 
+full-featured TCP kernel implementation, by dedicating network 
+interfaces to applications and offering an extended version of 
+the netmap API for zero-copy, low-overhead data path alongside 
+control path based on socket API. For small-message, 
+transactional workloads, StackMap outperforms baseline Linux 
+by 4 to 78 \% in latency and 42 to 133 \% in throughput. 
+It also achieves comparable performance with Seastar, 
+a highly-optimized user-level TCP/IP stack that runs on top of DPDK.
 
 \subsection{PATHspider: A tool for active measurement of path transparency}
 
