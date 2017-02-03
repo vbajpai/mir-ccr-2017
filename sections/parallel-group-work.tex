@@ -71,35 +71,40 @@ we assume being able to depend on in SDN deployments.
 
 % ------------- Lars Eggert
 \subsection{QUIC}
-\todo[inline]{Lars Eggert / Mirja Kuhlewind / Vaibhav Bajpai}
 
 QUIC \cite{draft-ietf-quic-transport} is a new UDP-based reliable transport
-protocol with build-in security and optimized for HTTP/2 \cite{rfc7540} that
-is currently being standardized by the \ac{IETF}. QUIC was originally proposed
-by Google and has already seen large-scale deployment for Google services and
-in Google Chrome.  Since September 2016 a new IETF working group reviews the
-design of QUIC in order to publish a QUIC protocol specification
-\cite{draft-ietf-quic-transport} with IETF consensus.
+protocol with built-in security. The protocol is optimized for HTTP/2
+\cite{rfc7540} that is currently being standardized by the \ac{IETF}. QUIC was
+originally proposed by Google and has already seen large-scale deployment for
+Google services and in Google Chrome. Since September 2016 a new IETF working
+group reviews the design of QUIC in order to publish a QUIC protocol
+specification with \ac{IETF} consensus. The break out session discussed how
+the \ac{IETF} should approach on how the information encrypted in the QUIC
+packets might be made available to legitimate network management or firewall
+functions. The session also went into retrospect on historical protocol
+innovations (such as HIP \cite{pnikander:comst:2010} and SCTP \cite{rfc4960})
+that failed to get widely deployed to understand whether one needs to be
+Google (or a large CDN player) to be able to deploy a protocol on the Internet
+today. It was mentioned how good ideas and engineering also needs the right
+incentives to see deployment and how partial deployability with one large CDN
+player already brings benefits. QUIC is witnessing rapid adoption also because
+Google controls both endpoints (browser and servers). As such, two endpoints
+that can agree on an exchange that does not require middleware updates makes
+it easier to deploy an innovation in practise, but still only influential
+organizations have that leverage. Dave Thaler in
+\cite{draft-iab-protocol-transitions} lays out strategies to allow smooth
+transitions of future protocol innovations. Cost and benefit tradeoffs of
+simpler deployability and clean-state designs were discussed. The deployment
+incentives need to be aligned to allow early adopters to see the investment
+benefits. It was also mentioned how operator networks remain opaque to
+designers of network protocols and for the need for additional large-scale
+measurement initiatives that help bring visibility into how current network
+operate in practise would be useful for protocol innovation.
 
-% Do you need to be Google or a large CDN deploy a protocol. Repeated failure
-% of good ideas (HIP and SCTP). Only if two endpoints can do something and not
-% require middleware to make changes is easier to deploy. Brian mentioned that
-% QUIC works because controls both endpoints (browser and servers) and also
-% pointed to TSV area slides.
+%Brian pointed to TSV area slides.
 
 % Friday notes from Mirja:
-% -wire image: what will be visible to the network for managibilty
-% - do you need to be a mayor internet player to deploy something? good ideas
-%   and good engineering needs also the right incentives to see deployment.
-%   particle deployability with jus one player already needs benefits. failure
-%   of hip, sctp, ? quic only need to change both endpoints (browser, and
-%   server) but still only big organizations can do that. work on transition
-%   strategies in IAB (draft). if deployment incentives are not aligned, it
-%   will not fly no better how good it is. First adopter problem: if no-one
-%   has incentives/benefits to go first, hard to convince people to invest
-%   even if the final approach would provide better results. In-network
-%   support needs also benefits if only one network adapts it, e.g. in data
-%   centers or local optimization.
+% - if deployment incentives are not aligned, it
 % - measurement provided by quic. Are additional measurements needed? Only few
 %   can do this large-scale measurements. How valuable are measurements of
 %   smaller networks (non-google).
@@ -123,64 +128,54 @@ need further research.
 % ------------- Alexander von Gernler
 \subsection{Security}
 
-The security breakout session covered civil liberties and privacy.
-
-Firstly, the group set its focus and decided not to discuss the topics of
-trustworthy hardware or civil liberties, but instead to concentrate on SDN
-security and problems of cloudification
-
-Key results: 1) Customer networks are converging:  Customers want less own
-hardware, and want to be more independent and to lease remote services and
-equipment rather than owning it.  2) Virtualization (which happens when you
-cloudify applications) amplifies known problems in traditional fields like
-security, trust, verifiability or visibility.  3) A special challenge is the
-cloudification of services that already utilize virtualization in the
-traditional model, for example sandboxes that analyze malware.  For a cloud
-case, one would end up with nested virtualization, which in turn comes with
-even new problems concerning performance and visibility of the virtualization
-to the malware being inspected 4) Encryption of data still leads to the
-usability of cloud scenarios being reduced to mostly SaaS, because homomorphic
-encryption is still not there to solve these problems 5) Special problems with
-end-to-end security, e.g., there is more end-to-end encryption happening,
-which is good.  As a downside however, it makes life harder for people
-inspecting traffic in the middle If termination of encrypted connections is
-done in the cloud, there will be an unencrypted last mile as new security
-issue arising from this scenario.
+The security breakout session covered civil liberties and privacy. Firstly,
+the group set its focus and decided not to discuss the topics of trustworthy
+hardware or civil liberties, but instead to concentrate on \ac{SDN} security
+and problems of cloudification. Key results: 1) Customer networks are
+converging:  Customers want less own hardware, and want to be more independent
+and to lease remote services and equipment rather than owning it.  2)
+Virtualization (which happens when you cloudify applications) amplifies known
+problems in traditional fields like security, trust, verifiability or
+visibility.  3) A special challenge is the cloudification of services that
+already utilize virtualization in the traditional model, for example sandboxes
+that analyze malware.  For a cloud case, one would end up with nested
+virtualization, which in turn comes with even new problems concerning
+performance and visibility of the virtualization to the malware being
+inspected 4) Encryption of data still leads to the usability of cloud
+scenarios being reduced to mostly SaaS, because homomorphic encryption is
+still not there to solve these problems 5) Special problems with end-to-end
+security, e.g., there is more end-to-end encryption happening, which is good.
+As a downside however, it makes life harder for people inspecting traffic in
+the middle If termination of encrypted connections is done in the cloud, there
+will be an unencrypted last mile as new security issue arising from this
+scenario.
 
 % ------------- Aaron
 \subsection{IoT and ICN}
 
-The breakout session on Internet of Things (IoT) and Information Centric 
+The breakout session on Internet of Things (IoT) and Information Centric
 Networking (ICN) covered the open problems and research directions for
 applying ICN technique to IoT. The identified problems include: 1) Limitation
-of existing protocols such as Constrained Application Protocol (CoAP) that 
-handles poorly the frequent leaving/joining events in the network. 2) The 
+of existing protocols such as Constrained Application Protocol (CoAP) that
+handles poorly the frequent leaving/joining events in the network. 2) The
 stereotype of "IoT gateway design" has hindered novel design. 3) We still
 have not yet come up with a suitable Internet architecture that integrates
 IoT coherently.
 
-The group discussed how to bring ICN schemes to IoT, and highlighted several 
-open questions: 1) Where does the network end nowadays? This question couples 
-with the ICN where nodes can contribute to the computation/content along 
-the path. 2) What functions on gateway functions we can remove? 3) How to do 
-naming "translation" without changing name/label? 4) Can we do packet 
-processing while it is passing through queue? 5) How to avoid looping in 
-the network functions? This is a key concern since we need to keep a 
-boundary for resource usage in the network. 6) How to maintain the state on 
+The group discussed how to bring ICN schemes to IoT, and highlighted several
+open questions: 1) Where does the network end nowadays? This question couples
+with the ICN where nodes can contribute to the computation/content along
+the path. 2) What functions on gateway functions we can remove? 3) How to do
+naming "translation" without changing name/label? 4) Can we do packet
+processing while it is passing through queue? 5) How to avoid looping in
+the network functions? This is a key concern since we need to keep a
+boundary for resource usage in the network. 6) How to maintain the state on
 the constrained nodes?
 
 Regarding potential research directions, the group deem the follwoing items
-important: 1) Design of end-to-end naming scheme, to facilitate IoT 
-application composition and bring down the overhead of porting applications 
-for the cloud to "gateways". 2) Semantics for individual sensor and 
-equivalence group. 3) Trade accuracy with replication. 4) A new computation 
-abstract suitable for IoT. 5) Abstract of distributed registry for network 
+important: 1) Design of end-to-end naming scheme, to facilitate IoT
+application composition and bring down the overhead of porting applications
+for the cloud to "gateways". 2) Semantics for individual sensor and
+equivalence group. 3) Trade accuracy with replication. 4) A new computation
+abstract suitable for IoT. 5) Abstract of distributed registry for network
 function. 6) Rethink how we distribute computing and content.
-
-
-
-
-
-
-
-
