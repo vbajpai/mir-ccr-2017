@@ -2,10 +2,10 @@
 \section{Posters}\label{sec:posters}
 %**************************************************************************
 
-Participants were encouraged to bring posters to present 
+Participants were encouraged to bring posters to present
 their recent research work.
 
-\subsection{The Cost of Security in the SDN Control Plane}
+\subsection{Cost of Security in the SDN Control Plane}
 
 In OpenFlow enabled \ac{SDN}, network control is carried out remotely via a
 control connection. In order to deploy OpenFlow in production networks,
@@ -23,192 +23,231 @@ design efficient mechanisms taking the security-delay trade-off into account.
 %\subsection{THE BALTIKUM TESTBED - Selected Activities in the Baltikum Testbed}
 \subsection{The Baltikum Testbed}
 
-The poster showed a high-level overview to the recent activities in the
-Baltikum Testbed. The testbed which is focussed on performance measurements of
-x86-based packet processing systems provides an automated, documented, and
-reproducible experiment workflow. The poster presented several activities,
-comprising the load generator MoonGen, automated benchmarks of routers and
-OpenFlow switches, and different performance studies, including an IPsec
-gateway with NIC-offloading.
+The poster showed a high-level overview to the recent activities
+\cite{pemmerich:imc:2015, sgallenmuller:ancs:2015, draumer:cloudnet:2016,
+draumer:anrw:2016} in the Baltikum Testbed. The testbed which is focussed on
+performance measurements of x86-based packet processing systems provides an
+automated, documented, and reproducible experiment workflow. The poster
+presented several activities, comprising the load generator MoonGen
+\cite{pemeerich:imc:2015}, automated benchmarks of routers and OpenFlow
+switches, and different performance studies, including an IPsec gateway with
+NIC-offloading.
 
-Ref: [1] P. Emmerich, S. Gallenmüller, D. Raumer, F. Wohlfart, and G. Carle.
-MoonGen: A Scriptable High-Speed Packet Generator. In Internet
-Measurement Conference 2015 (IMC’15), Tokyo,
-Japan, October 2015.
-[2] Sebastian Gallenmüller, Paul Emmerich, Florian Wohlfart, Daniel
-Raumer, and Georg Carle. Comparison of Frameworks for High-Performance
-Packet IO. In ACM/IEEE Symposium on
-Architectures for Networking and Communications Systems (ANCS 2015),
-Oakland, CA, USA, May 2015.
-[3] Daniel Raumer, Sebastian Gallenmüller, Paul Emmerich, Lukas Märdian,
-Florian Wohlfart, and Georg Carle. Efficient serving of VPN endpoints on
-COTS server hardware. In IEEE 5th
-International Conference on Cloud Networking (CloudNet’16), Pisa, Italy,
-October 2016.
-[4] Daniel Raumer, Sebastian Gallenmüller, Florian Wohlfart, Paul
-Emmerich, Patrick Werneck, and Georg Carle. Revisiting benchmarking
-methodology for interconnect devices. In Applied
-Networking Research Workshop 2016 (ANRW ’16), Berlin, Germany, 2016.
+%Ref: [1] P. Emmerich, S. Gallenmüller, D. Raumer, F. Wohlfart, and G. Carle.
+%MoonGen: A Scriptable High-Speed Packet Generator. In Internet
+%Measurement Conference 2015 (IMC’15), Tokyo,
+%Japan, October 2015.
 
+%[2] Sebastian Gallenmüller, Paul Emmerich, Florian Wohlfart, Daniel
+%Raumer, and Georg Carle. Comparison of Frameworks for High-Performance
+%Packet IO. In ACM/IEEE Symposium on
+%Architectures for Networking and Communications Systems (ANCS 2015),
+%Oakland, CA, USA, May 2015.
 
-\subsection{Boost Virtual Network Resource Allocation: Using Machine Learning for Optimization}
+%[3] Daniel Raumer, Sebastian Gallenmüller, Paul Emmerich, Lukas Märdian,
+%Florian Wohlfart, and Georg Carle. Efficient serving of VPN endpoints on
+%COTS server hardware. In IEEE 5th
+%International Conference on Cloud Networking (CloudNet’16), Pisa, Italy,
+%October 2016.
 
-Rapidly and efficiently allocating virtual network resources, i.e.,
-solving the online Virtual Network Embedding (VNE) problem is
-important in particular for future communication networks. We
-propose a system using an admission control to improve the performance
-for the online VNE problem. The admission control implements a Neural
-Network that classifies virtual network requests based on network
-representations, which are using graph and network resource features
-only. Via simulations, we demonstrate that the admission control,
-i.e., the Neural Network filters virtual network requests that are
-either infeasible or that need too long for being efficiently
-processed. Thus, our admission control reduces the overall system
-runtime, i.e., it improves the overall calculation efficiency for
-the online VNE problem.
-Generally, we demonstrate the ability to learn from the history
-of VNE algorithms. We show that it is possible to learn the behavior
-of algorithms and how to integrate this knowledge when solving future
-problem instances.
+%[4] Daniel Raumer, Sebastian Gallenmüller, Florian Wohlfart, Paul
+%Emmerich, Patrick Werneck, and Georg Carle. Revisiting benchmarking
+%methodology for interconnect devices. In Applied
+%Networking Research Workshop 2016 (ANRW ’16), Berlin, Germany, 2016.
 
-Reference:
-[1] A. Blenk, P. Kalmbach, P. van der Smagt, W. Kellerer, Boost Online
-Virtual Network Embedding: Using Neural Networks for Admission Control,
-12th International Conference on Network and Service Management (CNSM),
- Montreal, Quebec, Canada, Oktober 2016.
+%\subsection{Boost Virtual Network Resource Allocation: Using Machine Learning
+%for Optimization}
 
-\subsection{HyperFlex: Towards Flexible, Reliable and Dynamic SDN Virtualization Layer}
+\subsection{Boost Virtual Network Resource Allocation}
 
-The virtualization of Software Defined Networks (SDN) allows multiple tenants
-to share a physical SDN infrastructure, where each tenant can bring its own
-controller for a flexible control of its virtual SDN network (vSDN). In order
-to virtualize SDN networks, a network hypervisor is deployed between the
-physical infrastructure and the tenants' controllers. We present, HyperFlex, a
-flexible, reliable and dynamic SDN virtualization layer. HyperFlex achieves
-the flexibility of deploying hypervisor functions as software or alternatively
+Rapidly and efficiently allocating virtual network resources, i.e., solving
+the online Virtual Network Embedding (VNE) problem is important in particular
+for future communication networks. This poster proposes a system
+\cite{ablenk:cnsm:2016} using an admission control to improve the performance
+for the online VNE problem. The admission control implements a Neural Network
+that classifies virtual network requests based on network representations,
+which are using graph and network resource features only. They demonstrate via
+simulations that the admission control, i.e., the Neural Network filters
+virtual network requests that are either infeasible or that need too long for
+being efficiently processed. Thus, this admission control reduces the overall
+system runtime, i.e., it improves the overall calculation efficiency for the
+online VNE problem.  Generally, this work demonstrates the ability to learn
+from the history of VNE algorithms. It is possible to learn the behavior of
+algorithms and how to integrate this knowledge when solving future problem
+instances.
+
+%Reference:
+%[1] A. Blenk, P. Kalmbach, P. van der Smagt, W. Kellerer, Boost Online
+%Virtual Network Embedding: Using Neural Networks for Admission Control,
+%12th International Conference on Network and Service Management (CNSM),
+ %Montreal, Quebec, Canada, Oktober 2016.
+
+\subsection{HyperFlex}
+%\subsection{HyperFlex: Towards Flexible, Reliable and Dynamic SDN Virtualization Layer}
+
+The virtualization of \ac{SDN} allows multiple tenants to share a physical
+\ac{SDN} infrastructure, where each tenant can bring its own controller for a
+flexible control of its virtual \ac{SDN} network (vSDN)
+\cite{ablenk:comst:2015}. In order to virtualize \ac{SDN} networks, a network
+hypervisor is deployed between the physical infrastructure and the tenants'
+controllers. The poster presents, HyperFlex \cite{ablenk:im:2015}, a flexible,
+reliable and dynamic SDN virtualization layer.  HyperFlex achieves the
+flexibility of deploying hypervisor functions as software or alternatively
 using available processing capabilities of network nodes. It also provides
-resources isolation for the control plane of vSDNs. Additionally, HyperFlex
+resources isolation for the control plane of vSDNs.  Additionally, HyperFlex
 supports the dynamic migration of network hypervisor instances on run time.
-These features are key steps towards vigorous slicing in 5G.
+These features \cite{abasta:cnsm:2015, ablenk:tnsm:2016, abasta:im:2015} are
+key steps towards vigorous slicing in 5G.
 
-References:
-[1] A. Blenk, A. Basta, M. Reisslein, and W. Kellerer, “Survey on Network Virtualization Hypervisors
-for Software Defined Networking,” IEEE Communications Surveys \& Tutorials, pp. 1–32, 2015.
-[2] A. Blenk, A. Basta, and W. Kellerer, “HyperFlex: An SDN virtualization architecture with flexible
-hypervisor function allocation,” in Proc. IFIP/IEEE Conf. IM, pp. 397–405, 2015.
-[3] A. Basta, A. Blenk, H. Belhaj Hassine, and W. Kellerer, “Towards a dynamic SDN virtualization
-layer: Control path migration protocol,” in Proc. ManSDN/NFV Workshop (CNSM), 2015.
-[4] A. Blenk, A. Basta, J. Zerwas, M. Reisslein, and W. Kellerer, “Control plane latency with sdn
-network hypervisors: The cost of virtualization,” IEEE Transactions on Network and Service
-Management, pp. 360–380, 2016.
-[5] A. Basta, A. Blenk, Y.-T. Lai, and W. Kellerer, “HyperFlex: Demonstrating control-plane isolation
-for virtual software-defined networks,” in Proc. IFIP/IEEE Conf. IM, pp. 1163–1164., 2015.
+%References:
+%[1] A. Blenk, A. Basta, M. Reisslein, and W. Kellerer, “Survey on Network Virtualization Hypervisors
+%for Software Defined Networking,” IEEE Communications Surveys \& Tutorials, pp. 1–32, 2015.
+
+%[2] A. Blenk, A. Basta, and W. Kellerer, “HyperFlex: An SDN virtualization architecture with flexible
+%hypervisor function allocation,” in Proc. IFIP/IEEE Conf. IM, pp. 397–405, 2015.
+
+%[3] A. Basta, A. Blenk, H. Belhaj Hassine, and W. Kellerer, “Towards a dynamic SDN virtualization
+%layer: Control path migration protocol,” in Proc. ManSDN/NFV Workshop (CNSM), 2015.
+
+%[4] A. Blenk, A. Basta, J. Zerwas, M. Reisslein, and W. Kellerer, “Control
+%plane latency with sdn network hypervisors: The cost of virtualization,” IEEE
+%Transactions on Network and Service Management, pp. 360–380, 2016.
+
+%[5] A. Basta, A. Blenk, Y.-T. Lai, and W. Kellerer, “HyperFlex: Demonstrating
+%control-plane isolation for virtual software-defined networks,” in Proc.
+%IFIP/IEEE Conf. IM, pp. 1163–1164., 2015.
 
 \subsection{SafeCloud}
 
-The poster gives an overview of the cloud security activities of the
-SafeCloud project. Safe cloud usage for the user requires privacy and in
-SafeCloud a variety of privacy-enhanced services are developed. This
-includes cryptographic databases and secure multiparty computation.
-Security and resilience mechanisms add diverse and censorship-resistant
-storage, multipath and route monitoring.
+The poster gives an overview of the cloud security activities of the SafeCloud
+project \cite{safecloud}. SafeCloud usage for the user requires privacy and in
+SafeCloud a variety of privacy-enhanced services are developed. This includes
+cryptographic databases and secure multiparty computation.  Security and
+resilience mechanisms add diverse and censorship-resistant storage, multipath
+and route monitoring.
 
-Reference:
-safecloud-project.eu
+%Reference:
+%safecloud-project.eu
 
 \subsection{sKnock: Scalable Secure Port Knocking}
 
 Port-knocking  is  the  concept  of  hiding  remote  services behind   a
-  firewall   which   allows   access   to   the   services’ listening
-ports only after the client has successfully authenticated to  the
-firewall.  This  helps  in  preventing  scanners  from  learning what
-services  are  currently  available  on  a  host  and  also  serves as
-a  defense  against  zero-day  attacks.  Existing  port-knocking
-implementations are not scalable in service provider deployments due to
-their usage of shared secrets. Here, we introduce an  implementation  of
-port-knocking  based  on  x509  certificates aimed  towards  being
-highly  scalable.
+firewall   which   allows   access   to   the   services’ listening ports only
+after the client has successfully authenticated to  the firewall.  This  helps
+in  preventing  scanners  from  learning what services  are  currently
+available  on  a  host  and  also  serves as a  defense  against  zero-day
+attacks.  Existing  port-knocking implementations are not scalable in service
+provider deployments due to their usage of shared secrets. The poster
+introduces an  implementation \cite{dsel:mcsp:2016} of port-knocking  based
+on x509 certificates aimed towards  being highly  scalable.
 
-Reference:
-Daniel Sel, Sree Harsha Totakura, Georg Carle, “sKnock: Scalable
-Port-Knocking for Masses ,” in Workshop on Mobility and Cloud Security \&
-Privacy, Budapest, Hungary, Sep. 2016.
+%Reference:
+%Daniel Sel, Sree Harsha Totakura, Georg Carle, “sKnock: Scalable
+%Port-Knocking for Masses ,” in Workshop on Mobility and Cloud Security \&
+%Privacy, Budapest, Hungary, Sep. 2016.
 
-\subsection{BMBF Project SarDiNe}
+%\subsection{BMBF Project SarDiNe}
+\subsection{SarDiNe}
 
 The BMBF project SarDiNe is motivated by the advent of the virtualization of
-complete enterprise networks. Software defined networks (SDN) tremendously ease
-the creation and management of virtual networks which leads to new challenges
-in security policy enforcement. Traditionally, networks were separated
-physically and security was mainly enforced by firewalls placed at gateway
-positions between the physical networks. With highly dynamic virtual networks
-it remains unclear where to place firewalls, especially if higher security
-measures like filtering on the application layer are needed.
+complete enterprise networks. Software defined networks (SDN) tremendously
+ease the creation and management of virtual networks which leads to new
+challenges in security policy enforcement. Traditionally, networks were
+separated physically and security was mainly enforced by firewalls placed at
+gateway positions between the physical networks. With highly dynamic virtual
+networks it remains unclear where to place firewalls, especially if higher
+security measures like filtering on the application layer are needed.
 
-In SarDiNe we propose to virtualize firewall functionality as well and
-dynamically place it on commodity hardware managed by cloud techniques and
-spread across the network. Then, the SDN is used to dynamically reroute traffic
-via these virtual network functions (VNF). This approach promises a scalable
-and cost-efficient security solution applyable in many different setups. As main
-use case we elaborate a bring-your-own-device (BYOD) scenario. Also, we are
-interested in exploiting the SDN to provide parts of the filtering
-functionality in its fast switching hardware. The result is a hybrid VNF-SDN
-firewall which aims at a cost reduction in terms of computation resources
-needed for scaling and latency imposed by the rerouting.
+The poster presents SarDiNe, which proposes to virtualize firewall
+functionality as well and dynamically place it on commodity hardware managed
+by cloud techniques and spread across the network. Then, the SDN is used to
+dynamically reroute traffic via these virtual network functions (VNF). This
+approach promises a scalable and cost-efficient security solution applyable in
+many different setups. As main use case is to elaborate a
+bring-your-own-device (BYOD) scenario and there is also interest in exploiting
+the \ac{SDN} to provide parts of the filtering functionality in its fast
+switching hardware. The result is a hybrid VNF-SDN firewall which aims at a
+cost reduction in terms of computation resources needed for scaling and
+latency imposed by the rerouting.
 
 \subsection{Securebox}
 
-Securebox is an affordable and deployable platform for 
-securing and managing IoT networks. This proposal 
-targets an alarming spot in the fast growing IoT industry where 
-security is often overlooked due to device limitation, budget 
-constraint, and development deadline. In contrast to existing 
-host-centric and hardware-coupled solutions, it empowers 
-a cloud-assisted model dedicated to budget and resource 
-constrained IoT networks. Securebox allows us to 
-1) flexibly offload and onload security and management functions to the cloud and network edge components; 2) offer advanced security and management 
-services to end users in an affordable and on-demand manner; 
-3) ease the upgrade and deployment of new services to guard 
-against abrupt security breakouts. The current 
-implementation of Securebox consists of a plug-n-play 
-frontend, a Kubernetes-powered backend cluster, and a smartphone 
-mobile application. The testbed evaluation shows that 
-Securebox is robust and responsive. Its collaborative and 
-extensible architecture enforces rapid update cycles and can 
+Securebox is an affordable and deployable platform for securing and managing
+IoT networks. This proposal targets an alarming spot in the fast growing IoT
+industry where security is often overlooked due to device limitation, budget
+constraint, and development deadline. In contrast to existing host-centric and
+hardware-coupled solutions, it empowers a cloud-assisted model dedicated to
+budget and resource constrained IoT networks. Securebox allows to 1) flexibly
+offload and onload security and management functions to the cloud and network
+edge components; 2) offer advanced security and management services to end
+users in an affordable and on-demand manner; 3) ease the upgrade and
+deployment of new services to guard against abrupt security breakouts. The
+current implementation of Securebox consists of a plug-n-play frontend, a
+Kubernetes-powered backend cluster, and a smartphone mobile application. The
+testbed evaluation shows that Securebox is robust and responsive. Its
+collaborative and extensible architecture enforces rapid update cycles and can
 scale with the growing diversity of IoT devices.
 
 \subsection{StackMap}
 
-StackMap leverages the best aspects of kernel-bypass networking 
-into a new low-latency OS network service based on the 
-full-featured TCP kernel implementation, by dedicating network 
-interfaces to applications and offering an extended version of 
-the netmap API for zero-copy, low-overhead data path alongside 
-control path based on socket API. For small-message, 
-transactional workloads, StackMap outperforms baseline Linux 
-by 4 to 78 \% in latency and 42 to 133 \% in throughput. 
-It also achieves comparable performance with Seastar, 
-a highly-optimized user-level TCP/IP stack that runs on top of DPDK.
+StackMap \cite{kyasukata:atc:2016} leverages the best aspects of kernel-bypass
+networking into a new low-latency OS network service based on the
+full-featured TCP kernel implementation, by dedicating network interfaces to
+applications and offering an extended version of the netmap API for zero-copy,
+low-overhead data path alongside control path based on socket API. For
+small-message, transactional workloads, StackMap outperforms baseline Linux by
+4 to 78\% in latency and 42 to 133\% in throughput.  It also achieves
+comparable performance with Seastar, a highly-optimized user-level TCP/IP
+stack that runs on top of DPDK.
 
-\subsection{PATHspider: A tool for active measurement of path transparency}
+%\subsection{PATHspider: A tool for active measurement of path transparency}
+\subsection{PATHspider}
 
-In today’s Internet we see an increasing deployment of middleboxes. While 
-middleboxes provide in-network functionality that is necessary to keep 
-networks manageable and economically viable, any packet mangling – whether 
-essential for the needed functionality or accidental as an unwanted side 
-effect – makes it more and more difficult to deploy new protocols or 
-extensions of existing protocols. For the evolution of the protocol stack, 
-it is important to know which network impairments exist and potentially 
-need to be worked around. While classical network measurement tools are 
-often focused on absolute performance values, we present a new measurement 
-tool, called PATHspider that performs A/B testing between two different 
-protocols or different protocol extension to perform controlled experiments 
-of protocol-dependent connectivity problems as well as differential treatment. 
-PATHspider is a framework for performing and analyzing these measurements, 
-while the actual A/B test can be easily customized. This paper describes the 
-basic design approach and architecture of PATHspider and gives guidance how 
-to use and customize it.
+There is an increasing deployment of middleboxes in today’s Internet.  While
+middleboxes provide in-network functionality that is necessary to keep
+networks manageable and economically viable, any packet mangling – whether
+essential for the needed functionality or accidental as an unwanted side
+effect – makes it more and more difficult to deploy new protocols or
+extensions of existing protocols. For the evolution of the protocol stack, it
+is important to know which network impairments exist and potentially need to
+be worked around. While classical network measurement tools are often focused
+on absolute performance values, the poster presents a new measurement tool,
+called PATHspider \cite{ilearmonth:anrw:2016} that performs A/B testing
+between two different protocols or different protocol extension to perform
+controlled experiments of protocol-dependent connectivity problems as well as
+differential treatment.  PATHspider is a framework for performing and
+analyzing these measurements, while the actual A/B test can be easily
+customized. This poster describes the basic design approach and architecture
+of PATHspider and gives guidance how to use and customize it.
 
-\subsection{FlexNets: Quantifying Flexibility in Communication Networks}
+%\subsection{FlexNets: Quantifying Flexibility in Communication Networks}
+\subsection{FlexNets}
+%\subsection{Quantifying Flexibility in Communication Networks}
 
-Communication networks have emerged to become the basic infrastructure for all areas of our society with application areas ranging from social media to industrial production and healthcare. New requirements include the need for dynamic changes of the required resources, for example, to react to social events or to shifts of demands. Existing networks and, in particular, the Internet cannot meet those requirements mainly due to their ossification and hence limitation in resource allocation, i.e., lack of flexibility to adapt the available resources to changes of demands on a small time-scale and in an efficient way. In recent years, several concepts have emerged in networking research to provide more flexibility in networks through virtualization and control plane programmability. In particular, the split between data plane and a centralized control plane as defined by Software Defined Networking (SDN) is regarded as the basic concept to allow flexibility in networks. However, a deeper understanding of what flexibility means remains open. In this project, flexibility focuses on the dynamic changes in time and size of a network that is characterized by its resources (link rate and node capacities) and connectivity (network graph). It is the objective of this research to analyse the fundamental design space for flexibility in SDN-based networks with respect to cost such as resource usage, traffic overhead and delay. The outcome will be a set of quantitative arguments pro and contra certain design choices. An analytical cost model to quantitatively assess the trade-off for flexibility vs. cost will be developed. To assess flexibility with respect to general graph properties a graph model will be designed. The detailed analysis is based on three use cases: dynamic resource allocation, QoS control, and resilience. In the state of the art, selected aspects of flexibility have been explored for certain network scenarios, a fundamental and comprehensive analysis is missing.
+Communication networks have emerged to become the basic infrastructure for all
+areas of our society with application areas ranging from social media to
+industrial production and healthcare. New requirements include the need for
+dynamic changes of the required resources, for example, to react to social
+events or to shifts of demands. Existing networks and, in particular, the
+Internet cannot meet those requirements mainly due to their ossification and
+hence limitation in resource allocation, i.e., lack of flexibility to adapt
+the available resources to changes of demands on a small time-scale and in an
+efficient way. In recent years, several concepts have emerged in networking
+research to provide more flexibility in networks through virtualization and
+control plane programmability. In particular, the split between data plane and
+a centralized control plane as defined by Software Defined Networking (SDN) is
+regarded as the basic concept to allow flexibility in networks. However, a
+deeper understanding of what flexibility means remains open. In this project,
+flexibility focuses on the dynamic changes in time and size of a network that
+is characterized by its resources (link rate and node capacities) and
+connectivity (network graph). It is the objective of this research to analyse
+the fundamental design space for flexibility in SDN-based networks with
+respect to cost such as resource usage, traffic overhead and delay. The
+outcome will be a set of quantitative arguments pro and contra certain design
+choices. An analytical cost model to quantitatively assess the trade-off for
+flexibility vs. cost will be developed. To assess flexibility with respect to
+general graph properties a graph model will be designed. The detailed analysis
+is based on three use cases: dynamic resource allocation, QoS control, and
+resilience. In the state of the art, selected aspects of flexibility have been
+explored for certain network scenarios, a fundamental and comprehensive
+analysis is missing.
