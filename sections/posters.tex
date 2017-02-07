@@ -10,9 +10,8 @@ their recent research work.
 In OpenFlow enabled \ac{SDN}, network control is carried out remotely via a
 control connection. In order to deploy OpenFlow in production networks,
 security of the control connection is crucial. For OpenFlow connections, TLS
-encryption is recommended by the specification. This work
-\cite{wkellerer:conext:2015} analyzes the TLS support in the OpenFlow
-eco-system. In particular, a performance measurement tool was implemented for
+encryption is recommended by the specification. This work~\cite{wkellerer:conext:2015} analyzes the TLS support in the OpenFlow
+ecosystem. In particular, a performance measurement tool was implemented for
 encrypted OpenFlow connections, as there is non available. The first results
 show that security comes at an extra cost and hence further work is needed to
 design efficient mechanisms taking the security-delay trade-off into account.
@@ -23,13 +22,11 @@ design efficient mechanisms taking the security-delay trade-off into account.
 %\subsection{THE BALTIKUM TESTBED - Selected Activities in the Baltikum Testbed}
 \subsection{The Baltikum Testbed}
 
-The poster showed a high-level overview to the recent activities
-\cite{pemmerich:imc:2015, sgallenmuller:ancs:2015, draumer:cloudnet:2016,
+The poster showed a high-level overview to the recent activities~\cite{pemmerich:imc:2015, sgallenmuller:ancs:2015, draumer:cloudnet:2016,
 draumer:anrw:2016} in the Baltikum Testbed. The testbed which is focussed on
 performance measurements of x86-based packet processing systems provides an
 automated, documented, and reproducible experiment workflow. The poster
-presented several activities, comprising the load generator MoonGen
-\cite{pemmerich:imc:2015}, automated benchmarks of routers and OpenFlow
+presented several activities, comprising the load generator MoonGen~\cite{pemmerich:imc:2015}, automated benchmarks of routers and OpenFlow
 switches, and different performance studies, including an IPsec gateway with
 NIC-offloading.
 
@@ -62,8 +59,7 @@ NIC-offloading.
 
 Rapidly and efficiently allocating virtual network resources, i.e., solving
 the online Virtual Network Embedding (VNE) problem is important in particular
-for future communication networks. This poster proposes a system
-\cite{ablenk:cnsm:2016} using an admission control to improve the performance
+for future communication networks. This poster proposes a system~\cite{ablenk:cnsm:2016} using an admission control to improve the performance
 for the online VNE problem. The admission control implements a Neural Network
 that classifies virtual network requests based on network representations,
 which are using graph and network resource features only. They demonstrate via
@@ -87,16 +83,15 @@ instances.
 
 The virtualization of \ac{SDN} allows multiple tenants to share a physical
 \ac{SDN} infrastructure, where each tenant can bring its own controller for a
-flexible control of its virtual \ac{SDN} network (vSDN)
-\cite{ablenk:comst:2016}. In order to virtualize \ac{SDN} networks, a network
+flexible control of its virtual \ac{SDN} network (vSDN)~\cite{ablenk:comst:2016}. In order to virtualize \ac{SDN} networks, a network
 hypervisor is deployed between the physical infrastructure and the tenants'
-controllers. The poster presents, HyperFlex \cite{ablenk:im:2015,
+controllers. The poster presents, HyperFlex~\cite{ablenk:im:2015,
 abasta:im:2015}, a flexible, reliable and dynamic SDN virtualization layer.
 HyperFlex achieves the flexibility of deploying hypervisor functions as
 software or alternatively using available processing capabilities of network
 nodes. It also provides resources isolation for the control plane of vSDNs.
 Additionally, HyperFlex supports the dynamic migration of network hypervisor
-instances on run time.  These features \cite{abasta:cnsm:2015,
+instances on run time.  These features~\cite{abasta:cnsm:2015,
 ablenk:tnsm:2016} are key steps towards vigorous slicing in 5G.
 
 %References:
@@ -120,7 +115,7 @@ ablenk:tnsm:2016} are key steps towards vigorous slicing in 5G.
 \subsection{SafeCloud}
 
 The poster gives an overview of the cloud security activities of the SafeCloud
-project \cite{safecloud}. SafeCloud usage for the user requires privacy and in
+project~\cite{safecloud}. SafeCloud usage for the user requires privacy and in
 SafeCloud a variety of privacy-enhanced services are developed. This includes
 cryptographic databases and secure multiparty computation.  Security and
 resilience mechanisms add diverse and censorship-resistant storage, multipath
@@ -138,7 +133,7 @@ in  preventing  scanners  from  learning what services  are  currently
 available  on  a  host  and  also  serves as a  defense  against  zero-day
 attacks.  Existing  port-knocking implementations are not scalable in service
 provider deployments due to their usage of shared secrets. The poster
-introduces an  implementation \cite{dsel:mcsp:2016} of port-knocking  based
+introduces an  implementation~\cite{dsel:mcsp:2016} of port-knocking  based
 on x509 certificates aimed towards  being highly  scalable.
 
 %Reference:
@@ -162,7 +157,7 @@ The poster presents SarDiNe, which proposes to virtualize firewall
 functionality as well and dynamically place it on commodity hardware managed
 by cloud techniques and spread across the network. Then, the SDN is used to
 dynamically reroute traffic via these virtual network functions (VNF). This
-approach promises a scalable and cost-efficient security solution applyable in
+approach promises a scalable and cost-efficient security solution applicable to
 many different setups. As main use case is to elaborate a
 bring-your-own-device (BYOD) scenario and there is also interest in exploiting
 the \ac{SDN} to provide parts of the filtering functionality in its fast
@@ -172,11 +167,11 @@ latency imposed by the rerouting.
 
 \subsection{Securebox}
 
-Securebox \cite{hafeez:can:2016, hafeez:s3:2015} is an affordable and
+Securebox~\cite{hafeez:can:2016, hafeez:s3:2015} is an affordable and
 deployable platform for securing and managing IoT networks. This proposal
 targets an alarming spot in the fast growing IoT industry where security is
 often overlooked due to device limitation, budget constraint, and development
-deadline \cite{haus:comst:2017}.  In contrast to existing host-centric and
+deadline~\cite{haus:comst:2017}.  In contrast to existing host-centric and
 hardware-coupled solutions, it empowers a cloud-assisted model dedicated to
 budget and resource constrained IoT networks. Securebox allows to 1) flexibly
 offload and onload security and management functions to the cloud and network
@@ -191,15 +186,15 @@ scale with the growing diversity of IoT devices.
 
 \subsection{StackMap}
 
-StackMap \cite{kyasukata:atc:2016} leverages the best aspects of kernel-bypass
+StackMap~\cite{kyasukata:atc:2016} leverages the best aspects of kernel-bypass
 networking into a new low-latency OS network service based on the
 full-featured TCP kernel implementation, by dedicating network interfaces to
 applications and offering an extended version of the netmap API for zero-copy,
-low-overhead data path alongside control path based on socket API. For
+low-overhead data path alongside control path based on socket API\@. For
 small-message, transactional workloads, StackMap outperforms baseline Linux by
 4 to 78\% in latency and 42 to 133\% in throughput.  It also achieves
 comparable performance with Seastar, a highly-optimized user-level TCP/IP
-stack that runs on top of DPDK.
+stack that runs on top of DPDK\@.
 
 %\subsection{PATHspider: A tool for active measurement of path transparency}
 \subsection{PATHspider}
@@ -213,7 +208,7 @@ extensions of existing protocols. For the evolution of the protocol stack, it
 is important to know which network impairments exist and potentially need to
 be worked around. While classical network measurement tools are often focused
 on absolute performance values, the poster presents a new measurement tool,
-called PATHspider \cite{ilearmonth:anrw:2016} that performs A/B testing
+called PATHspider~\cite{ilearmonth:anrw:2016} that performs A/B testing
 between two different protocols or different protocol extension to perform
 controlled experiments of protocol-dependent connectivity problems as well as
 differential treatment.  PATHspider is a framework for performing and
@@ -227,7 +222,7 @@ of PATHspider and gives guidance how to use and customize it.
 
 Communication networks have emerged to become the basic infrastructure for all
 areas of our society with application areas ranging from social media to
-industrial production and healthcare. New requirements include the need for
+industrial production and health care. New requirements include the need for
 dynamic changes of the required resources, for example, to react to social
 events or to shifts of demands. Existing networks and, in particular, the
 Internet cannot meet those requirements mainly due to their ossification and
@@ -246,7 +241,7 @@ the fundamental design space for flexibility in SDN-based networks with
 respect to cost such as resource usage, traffic overhead and delay. The
 outcome will be a set of quantitative arguments pro and contra certain design
 choices. An analytical cost model to quantitatively assess the trade-off for
-flexibility vs. cost will be developed. To assess flexibility with respect to
+flexibility vs.\ cost will be developed. To assess flexibility with respect to
 general graph properties a graph model will be designed. The detailed analysis
 is based on three use cases: dynamic resource allocation, QoS control, and
 resilience. In the state of the art, selected aspects of flexibility have been
