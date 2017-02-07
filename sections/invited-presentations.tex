@@ -15,32 +15,33 @@ and identifying areas for group work.
 \subsection{Digital Sovereignty in the Post Snowden Era}
 
 In this talk, Alexander von Gemler (genua GmbH) emphasizes the need for the
-availability of trustworthy hardware and trustworthy operating systems for the
-common user.  The postulation is that without these means, democracy itself
-will suffer in the long run, as people need not only to be unwatched and
-uncensored when pursuing their forming and expressing of political opinion,
-but they also need to feel unwatched and uncensored.  If these prerequisites
-are not met, chilling effects will occur, and the users will adjust their
-behaviour to whatever they think is socially appropriate.  The talk finishes
-by enumerating some possible ways out of the situation, and appeals to the
-conscience of the computer scientists around, as they are needed to explain
-the problem to society, and ultimately solve it.
-
+availability of trustworthy hardware and operating systems for the common
+user.  The postulation is that without these means, democracy will suffer in
+the long run, as people need not only to be unwatched and uncensored when
+pursuing their forming and expressing of political opinion, but they also need
+to feel unwatched and uncensored.  If these prerequisites are not met,
+chilling effects will occur, and the users will adjust their behaviour to
+whatever they think is socially appropriate.  The talk finishes by enumerating
+some possible ways out of the situation, and appeals to the conscience of the
+computer scientists around, as they are needed to explain the problem to
+society, and ultimately solve it.
 
 % ------------ Artur Hecker
 \subsection{On software network management}
 
 In this talk, Artur Hecker (Huawei) argues that the paradigm change brought by
-software networks does not suit well any planning approach for network
+software networks does not suit well planning approaches for network
 dimensioning and design, including but not limited to planning or
-pre-provisioning of management and control planes per se. As an example, OF
-\ac{SDN} and ETSI \ac{NFV} silently rely on pre-established, fixed control
-networks; opening these up for programmability currently bears risks with
-respect to the integrity of the control plane easily leading to e.g. a
-self-lockout. To overcome this, he proposes a new model and a new protocol, a
-sort of a least common denominator for software networks, whose only
-well-defined purpose it is to autonomously construct, adjust and maintain
-control plane including the placement of control compute nodes and control
+pre-provisioning of management and control planes. As an example, OF \ac{SDN}
+and ETSI \ac{NFV} silently rely on pre-established, fixed control networks;
+opening these up for programmability currently bears risks
+\cite{lschiff:dsn:2016} with respect to the integrity of the control plane
+easily leading to a self-lockout.  In contrast to previous work targeting
+similar problems which used OpenFlow \cite{lschiff:ccr:2016} to overcome these
+problems, he proposes a new model and a protocol, sort of a least common
+denominator for software networks, whose only well-defined purpose is to
+autonomously construct, adjust and maintain control plane including the
+elastic placement of control compute nodes \cite{yliu:icc:2015} and control
 paths without presuming any particular network purpose.
 
 % ------------ Wolfgang Kellerer
