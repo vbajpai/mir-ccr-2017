@@ -64,8 +64,8 @@ and gives an illustrative example with \ac{SDN} controller placement.
 \subsection{An Accidental Internet Architecture}
 
 The Internet, as seen from the point of view of the applications, services,
-and user agents it connects, is defined by the interfaces it provides. Brian
-Trammell (ETH Zürich) in this talk, introduced PostSockets
+and user agents it connects, is defined by the interfaces it provides. In this talk Brian
+Trammell (ETH Zürich), introduced PostSockets
 \cite{draft-trammell-post-sockets}, a work-in-progress proposal to re-imagine
 the Internet from a new API down. PostSockets provides for secure,
 message-oriented, explicitly multipath, asynchronous communication.  It
@@ -131,7 +131,7 @@ of thousands of BGP messages. Also, pre-populating backup forwarding rules is
 impossible as any subset of the prefixes can be impacted.
 
 In this presentation, Laurent Vanbever (ETH Zurich) presented SWIFT, a general
-fast re-route framework supporting both local and remote failures~\cite{}.
+fast re-route framework supporting both local and remote failures~\cite{} \todo[inline]{missing cite}.
 SWIFT is based on two novel techniques. First, SWIFT copes with slow
 notification by predicting the overall extent of a remote failure out of few
 control-plane (BGP) messages. Second, SWIFT introduces a new data-plane
@@ -140,7 +140,7 @@ forwarding entries.
 
 SWIFT have been implemented by the ETH \ac{NSG} and its performance benefits
 have been demonstrated by showing that: i) SWIFT is able to predict the extent
-of a remote failure with high accuracy (?93\%); and ii) SWIFT encoding scheme
+of a remote failure with high accuracy (\todo[inline]{what's with the ``?'' ?}?93\%); and ii) SWIFT encoding scheme
 enables to fast-converge more than 95\% of the impacted forwarding entries.
 Overall, SWIFT reduces the average convergence time from few minutes to few
 seconds.
