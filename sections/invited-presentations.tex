@@ -131,19 +131,18 @@ of thousands of BGP messages. Also, pre-populating backup forwarding rules is
 impossible as any subset of the prefixes can be impacted.
 
 In this presentation, Laurent Vanbever (ETH Zurich) presented SWIFT, a general
-fast re-route framework supporting both local and remote failures~\cite{} \todo[inline]{missing cite}.
-SWIFT is based on two novel techniques. First, SWIFT copes with slow
-notification by predicting the overall extent of a remote failure out of few
-control-plane (BGP) messages. Second, SWIFT introduces a new data-plane
-encoding scheme which enables it to quickly and flexibly update the impacted
-forwarding entries.
+fast re-route framework supporting both local and remote failures.  SWIFT is
+based on two novel techniques. First, SWIFT copes with slow notification by
+predicting the overall extent of a remote failure out of few control-plane
+(BGP) messages. Second, SWIFT introduces a new data-plane encoding scheme
+which enables it to quickly and flexibly update the impacted forwarding
+entries.
 
 SWIFT have been implemented by the ETH \ac{NSG} and its performance benefits
-have been demonstrated by showing that: i) SWIFT is able to predict the extent
-of a remote failure with high accuracy (\todo[inline]{what's with the ``?'' ?}?93\%); and ii) SWIFT encoding scheme
-enables to fast-converge more than 95\% of the impacted forwarding entries.
-Overall, SWIFT reduces the average convergence time from few minutes to few
-seconds.
+have been demonstrated by showing that SWIFT is able to predict the extent of
+a remote failure with high accuracy (93\%) and SWIFT encoding scheme enables
+to fast-converge more than 95\% of the impacted forwarding entries. Overall,
+SWIFT reduces the average convergence time from few minutes to few seconds.
 
 %\footnote{http://synet.ethz.ch/}
 
