@@ -5,9 +5,15 @@
 }
 
 @misc{safecloud,
-  title = {{Secure and Resilient Cloud Architecture}},
+  title = {{SafeCloud}},
   howpublished = "\url{http://www.safecloud-project.eu}",
   note = "[Online; accessed 03-Feb-2017]"
+}
+
+@misc{automon,
+  title = {{AutoMon -- Automated Performance Monitoring}},
+  howpublished = "\url{http://automon-projekt.de/en}",
+  note = "[Online; accessed 07-Feb-2017]"
 }
 
 @inproceedings{hafeez:can:2016,
@@ -182,7 +188,7 @@ ISSN={1553-877X},
   author    = {Wolfgang Kellerer and
                Arsany Basta and
                Andreas Blenk},
-  title     = {Using a flexibility measure for network design space analysis of {SDN} and {NFV}},
+  title     = {Using a {F}lexibility {M}easure for {N}etwork {D}esign {S}pace {A}nalysis of {SDN} and {NFV}},
   booktitle = {{IEEE} {INFOCOM} Workshop},
   pages     = {423--428},
   year      = {2016},
@@ -226,23 +232,6 @@ ISSN={1553-877X},
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 
-@inproceedings{sgallenmuller:ancs:2015,
- author = {Gallenm\"{u}ller, Sebastian and Emmerich, Paul and Wohlfart, Florian and Raumer, Daniel and Carle, Georg},
- title = {Comparison of Frameworks for High-Performance Packet IO},
- booktitle = {Proceedings of the Eleventh ACM/IEEE Symposium on Architectures for Networking and Communications Systems},
- series = {ANCS '15},
- year = {2015},
- isbn = {978-1-4673-6632-8},
- location = {Oakland, California, USA},
- pages = {29--38},
- numpages = {10},
- url = {http://dl.acm.org/citation.cfm?id=2772722.2772729},
- acmid = {2772729},
- publisher = {IEEE Computer Society},
- address = {Washington, DC, USA},
- keywords = {dpdk, netmap, performance measurement, pf_ring zc, software packet processing},
-}
-
 @inproceedings{draumer:anrw:2016,
  author = {Raumer, Daniel and Gallenm\"{u}ller, Sebastian and Wohlfart, Florian and Emmerich, Paul and Werneck, Patrick and Carle, Georg},
  title = {{Revisiting Benchmarking Methodology for Interconnect Devices}},
@@ -261,7 +250,7 @@ ISSN={1553-877X},
 @ARTICLE{ablenk:comst:2015,
 author={A. Blenk and A. Basta and M. Reisslein and W. Kellerer},
 journal={IEEE Communications Surveys Tutorials},
-title={Survey on Network Virtualization Hypervisors for Software Defined Networking},
+title={{Survey on Network Virtualization Hypervisors for Software Defined Networking}},
 year={2016},
 volume={18},
 number={1},
@@ -275,8 +264,8 @@ month={Firstquarter},}
   author    = {Andreas Blenk and
                Arsany Basta and
                Wolfgang Kellerer},
-  title     = {{HyperFlex: An {SDN} virtualization architecture with flexible hypervisor
-               function allocation}},
+  title     = {{HyperFlex: An {SDN} Virtualization Architecture with Flexible Hypervisor
+               Function Allocation}},
   booktitle = {IFIP/IEEE International Symposium on Integrated Network Management ({IM})},
   year      = {2015},
   crossref  = {DBLP:conf/im/2015},
@@ -285,25 +274,6 @@ month={Firstquarter},}
   timestamp = {Tue, 07 Jul 2015 13:19:59 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/im/BlenkBK15},
   bibsource = {dblp computer science bibliography, http://dblp.org}
-}
-
-@ARTICLE{ablenk:tnsm:2016,
-author={A. Blenk and A. Basta and J. Zerwas and M. Reisslein and W. Kellerer},
-journal={IEEE Transactions on Network and Service Management},
-title={Control Plane Latency With SDN Network Hypervisors: The Cost of Virtualization},
-year={2016},
-volume={13},
-number={3},
-pages={366-380},
-keywords={integer programming;software defined networking;virtualisation;SDN network hypervisor architectures;latency overhead;mixed integer programming;model-based analysis;multicontroller switches;physical SDN network infrastructure;software defined networking network hypervisors;software-defined network virtualization;tenant controllers;virtual SDN networks;virtualized OpenFlow-enabled SDN networks;Computer architecture;Control systems;Network topology;Software;Synchronization;Virtual machine monitors;Virtualization;Integer linear program;network hypervisor architecture;network virtualization;software defined networking;virtual software defined network embedding},
-doi={10.1109/TNSM.2016.2587900},
-ISSN={1932-4537},
-month={Sept},}
-
-@misc{safecloud,
-  title = {{SAFECLOUD}},
-  howpublished = "Project Site: \url{safecloud-project.eu}",
-  note = "[Online; accessed 3-February-2017]"
 }
 
 @inproceedings{kyasukata:atc:2016,
@@ -418,18 +388,26 @@ month={Sept},}
                Florian Wohlfart and
                Daniel Raumer and
                Georg Carle},
-  title     = {Comparison of Frameworks for High-Performance Packet {IO}},
   booktitle = {Proceedings of the Eleventh {ACM/IEEE} Symposium on Architectures
                for networking and communications systems, {ANCS} 2015, Oakland, CA,
                USA, May 7-8, 2015},
+  title     = {Comparison of {F}rameworks for {H}igh-{P}erformance {P}acket {IO}},
+  series = {ANCS '15},
+  location = {Oakland, California, USA},
   pages     = {29--38},
   year      = {2015},
   crossref  = {DBLP:conf/ancs/2015},
   url       = {http://dx.doi.org/10.1109/ANCS.2015.7110118},
+  isbn = {978-1-4673-6632-8},
   doi       = {10.1109/ANCS.2015.7110118},
   timestamp = {Wed, 27 Apr 2016 17:41:15 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/conf/ancs/GallenmullerEWR15},
-  bibsource = {dblp computer science bibliography, http://dblp.org}
+  bibsource = {dblp computer science bibliography, http://dblp.org},
+  acmid = {2772729},
+  numpages = {10},
+  publisher = {IEEE Computer Society},
+  address = {Washington, DC, USA},
+  keywords = {dpdk, netmap, performance measurement, pf_ring zc, software packet processing}
 }
 
 @inproceedings{draumer:cloudnet:2016,
@@ -470,7 +448,7 @@ month={Sept},}
                Patrick Kalmbach and
                Patrick van der Smagt and
                Wolfgang Kellerer},
-  title     = {{Boost online virtual network embedding: Using neural networks for admission control}},
+  title     = {{Boost Online Virtual Network Embedding: Using Neural Networks for Admission Control}},
   booktitle = {Conference on Network and Service Management ({CNSM})},
   pages     = {10--18},
   year      = {2016},
@@ -482,31 +460,13 @@ month={Sept},}
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
 
-@inproceedings{ablenk:im:2015,
-  author    = {Andreas Blenk and
-               Arsany Basta and
-               Wolfgang Kellerer},
-  title     = {HyperFlex: An {SDN} virtualization architecture with flexible hypervisor
-               function allocation},
-  booktitle = {{IFIP/IEEE} International Symposium on Integrated Network Management,
-               {IM} 2015, Ottawa, ON, Canada, 11-15 May, 2015},
-  pages     = {397--405},
-  year      = {2015},
-  crossref  = {DBLP:conf/im/2015},
-  url       = {http://dx.doi.org/10.1109/INM.2015.7140316},
-  doi       = {10.1109/INM.2015.7140316},
-  timestamp = {Tue, 07 Jul 2015 13:19:59 +0200},
-  biburl    = {http://dblp.uni-trier.de/rec/bib/conf/im/BlenkBK15},
-  bibsource = {dblp computer science bibliography, http://dblp.org}
-}
-
 @article{ablenk:comst:2016,
   author    = {Andreas Blenk and
                Arsany Basta and
                Martin Reisslein and
                Wolfgang Kellerer},
-  title     = {Survey on Network Virtualization Hypervisors for Software Defined
-               Networking},
+  title     = {{Survey on Network Virtualization Hypervisors for Software Defined
+               Networking}},
   journal   = {{IEEE} Communications Surveys and Tutorials},
   volume    = {18},
   number    = {1},
@@ -542,18 +502,20 @@ month={Sept},}
                Johannes Zerwas and
                Martin Reisslein and
                Wolfgang Kellerer},
-  title     = {Control Plane Latency With {SDN} Network Hypervisors: The Cost of
-               Virtualization},
+  title     = {{Control Plane Latency With {SDN} Network Hypervisors: The Cost of
+               Virtualization}},
   journal   = {{IEEE} Trans. Network and Service Management},
   volume    = {13},
   number    = {3},
   pages     = {366--380},
   year      = {2016},
+  month={Sept},
   url       = {http://dx.doi.org/10.1109/TNSM.2016.2587900},
   doi       = {10.1109/TNSM.2016.2587900},
   timestamp = {Thu, 06 Oct 2016 15:38:34 +0200},
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/tnsm/BlenkBZRK16},
-  bibsource = {dblp computer science bibliography, http://dblp.org}
+  bibsource = {dblp computer science bibliography, http://dblp.org},
+  ISSN={1932-4537}
 }
 
 @inproceedings{abasta:im:2015,
@@ -561,7 +523,7 @@ month={Sept},}
                Andreas Blenk and
                Yu{-}Ting Lai and
                Wolfgang Kellerer},
-  title     = {{HyperFlex: Demonstrating control-plane isolation for virtual software-defined networks}},
+  title     = {{HyperFlex: Demonstrating Control-Plane Isolation for Virtual Software-Defined Networks}},
   booktitle = {International Symposium on Integrated Network Management ({IM})},
   year      = {2015},
   crossref  = {DBLP:conf/im/2015},
@@ -576,7 +538,7 @@ month={Sept},}
   author    = {Liron Schiff and
                Stefan Schmid and
                Petr Kuznetsov},
-  title     = {In-Band Synchronization for Distributed {SDN} Control Planes},
+  title     = {{In-Band Synchronization for Distributed {SDN} Control Planes}},
   journal   = {Computer Communication Review},
   volume    = {46},
   number    = {1},
@@ -610,8 +572,8 @@ month={Sept},}
   author    = {Liron Schiff and
                Stefan Schmid and
                Marco Canini},
-  title     = {Ground Control to Major Faults: Towards a Fault Tolerant and Adaptive
-               {SDN} Control Network},
+  title     = {{Ground Control to Major Faults: Towards a Fault Tolerant and Adaptive
+               {SDN} Control Network}},
   booktitle = {46th Annual {IEEE/IFIP} International Conference on Dependable Systems
                and Networks Workshops, {DSN} Workshops 2016, Toulouse, France, June
                28 - July 1, 2016},
