@@ -8,6 +8,22 @@ their recent research work.
 %-- Hagen Paul Pfeifer
 \subsection{Dynamic MultiPath Routing}
 
+Safety critical communication platforms often deploy multiple heterogeneous
+wireless link layer access technologies like ETSI TETRA, IEEE 802.11, IEEE
+802.15.4, 3GPP LTE, satellite terminals or proprietary waveforms.  Depending
+on the interface characteristics, vendor specific decisions and other aspects,
+these often come shipped with suitable mobile ad-hoc routing protocols to form
+networks in an autonomous manner - independently for each link type. 802.11
+links typically deploy OLSR, BATMAN or 802.11s, whereas proprietary waveforms
+often come with proprietary MANET protocols.  To bridge these access networks
+at a logically higher level and provide an opaque operational network view, a
+network routing protocol at the top is required. Exterior routing protocols
+like BGP are limited in their use and features like automatic neighbor
+detection or reduced message overhead are required. \ac{DMPR} tries to address
+these shortcomings and provides exterior routing protocol features for
+heterogeneous link layer environments even in low bandwidth environments.
+Furthermore, \ac{DMPR} features policy based routing to route traffic through
+different paths if required or advantageous.
 
 %-- Volker Hilt
 \subsection{Edge Clouds - Challenges and Solutions}
