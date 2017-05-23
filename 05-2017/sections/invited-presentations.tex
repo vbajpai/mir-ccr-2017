@@ -47,8 +47,8 @@ negative implications of plain-text CCA to boost deployment of encrypted CCA
 as in TLS 1.3.
 
 %-- Dirk Kutscher
-\subsection{Tentatively: IoT Research Ideas}
-$--$ Dirk Kutscher
+%\subsection{Tentatively: IoT Research Ideas}
+%$--$ Dirk Kutscher
 
 %-- Hagen Paul Pfeifer
 \subsection{Dynamic MultiPath Routing Protocol}
@@ -72,7 +72,26 @@ different paths if required or advantageous.
 
 %-- Hannes Tschofenig
 \subsection{Internet of Things Security: TrustZone for v8-M architecture}
-$--$ Hannes Tschofenig
+
+Internet of Things (IoT) devices today use microcontrollers that are limited
+in CPU performance, as well as in RAM and flash size. Many of these devices
+use the ARM A-class or M-class processors. A-class CPUs are able to run
+popular operating systems (OS), such as embedded Linux, while M-class CPUs use
+Real-Time Operating Systems. So far, the security functionality of M- and
+A-class CPUs has been very different.  A-class CPUs can use sophisticated
+hardware features, such as TrustZone offering physical separation between the
+normal and the secure world operating systems. M-class CPUs offer basic
+security protection using the memory protection unit (MPU), which offers
+memory isolation.  Many IoT products, however, use very few operating system
+security techniques, if they run an OS at all, and often do not make use of
+hardware security support. While the exact reasons for these design decisions
+remain unclear, the growing list of IoT security failures calls for improved
+protection capabilities.  With the introduction of the TrustZone for ARMv8-M
+architecture, security features known from the mobile world are now available
+in the IoT environment. Additionally, ARM v8-A processors  enhance security
+with the Pointer Authentication Extension, which prevents return-oriented
+programming-based attacks.  In this talk Hannes will explain the hardware
+security features offered by upcoming ARM processors and microcontrollers.
 
 %-- Michio Honda
 %\subsection{Persistence in Networking: Redesigning Stack, API and Networks}
