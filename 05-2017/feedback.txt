@@ -1,0 +1,40 @@
+-- topics:
+  -- mobile internet
+  -- P4
+  -- vehicle to X communition and related topics (QoS)
+  -- 5G
+  -- social levels aspects of the technology
+  -- systems community people
+  -- avoid curated IoT ecosystem (such as iOS store)
+  -- assessment of network security
+
+-- less time for talks x 2, more time for breakout session x 4
+
+-- confine breadth? -- No, hard to know upfront who is coming. It's about
+   people with expertise that come
+
+-- well done! -- controversial statements to start the discussion of a break
+   out session.
+
+-- have a talk identify high-level problems.
+
+-- poster session, breakouts, coffee breaks were good.
+
+-- reduce buzzword topics
+
+-- champion for the topic.
+
+-- abstract of the talk should be on the webpage before the seminar. Allow
+   possibility to share the posters upfront.
+
+-- smaller tables for dinner, name tags at dinner tables.
+
+-- have the posters in the same room, more time during the posters.
+
+-- industry and academia -- 50%
+
+-- more industry talks.
+
+-- have senior people in the breakout sessions drive discussions.
+
+-- 1st iteration was more interactive.
