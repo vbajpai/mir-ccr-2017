@@ -73,10 +73,10 @@ different paths if required or advantageous.
 %-- Hannes Tschofenig
 \subsection{Internet of Things Security: TrustZone for v8-M architecture}
 
-Internet of Things (IoT) devices today use microcontrollers that are limited
-in CPU performance, as well as in RAM and flash size. Many of these devices
-use the ARM A-class or M-class processors. A-class CPUs are able to run
-popular operating systems (OS), such as embedded Linux, while M-class CPUs use
+\ac{IoT} devices today use microcontrollers that are limited in CPU
+performance, as well as in RAM and flash size. Many of these devices use the
+ARM A-class or M-class processors. A-class CPUs are able to run popular
+operating systems (OS), such as embedded Linux, while M-class CPUs use
 Real-Time Operating Systems. So far, the security functionality of M- and
 A-class CPUs has been very different.  A-class CPUs can use sophisticated
 hardware features, such as TrustZone offering physical separation between the
@@ -88,21 +88,22 @@ hardware security support. While the exact reasons for these design decisions
 remain unclear, the growing list of IoT security failures calls for improved
 protection capabilities.  With the introduction of the TrustZone for ARMv8-M
 architecture, security features known from the mobile world are now available
-in the IoT environment. Additionally, ARM v8-A processors  enhance security
-with the Pointer Authentication Extension, which prevents return-oriented
-programming-based attacks.  In this talk Hannes will explain the hardware
-security features offered by upcoming ARM processors and microcontrollers.
+in the \ac{IoT} environment. Additionally, ARM v8-A processors  enhance
+security with the Pointer Authentication Extension, which prevents
+return-oriented programming-based attacks.  In this talk Hannes will explain
+the hardware security features offered by upcoming ARM processors and
+microcontrollers.
 
 %-- Michio Honda
 %\subsection{Persistence in Networking: Redesigning Stack, API and Networks}
 \subsection{Redesigning Stack, API and Networks}
 
-Emerging Non-Volatile Main Memories (NVMMs), also known as storage-class
-memory and persistent memory  push the majority of end-to-end latency that
-includes durable I/O to network stacks and their APIs.  This not only impairs
-inherent performance of NVMMs that is one to two orders of magnitude faster
-than traditional persistent medias like SSDs, but prevents systems from
-adopting them to be reliable with relative ease.  Our work investigates
+Emerging \ac{NVMMs}, also known as storage-class memory and persistent memory
+push the majority of end-to-end latency that includes durable I/O to network
+stacks and their APIs.  This not only impairs inherent performance of
+\ac{NVMMs} that is one to two orders of magnitude faster than traditional
+persistent medias like \ac{SSDs}, but prevents systems from adopting them to
+be reliable with relative ease. Michio Honda (NEC) investigates towards
 solving this problem, designing an efficient network stack and its APIs, and
 exploring new opportunities in networking such as software switches and
 middleboxes in addition to improving networked storage systems.
