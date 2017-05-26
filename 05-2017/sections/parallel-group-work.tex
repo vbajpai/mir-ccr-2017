@@ -36,3 +36,62 @@ Firmware updates~\cite{philips, hp} changing behaviour of the device.
 %-- Lars Wischoff
 \subsection{networking APIs}
 %\subsection{regulatory issues} -- merged
+
+The first phase in the discussion of the group was to define the assumptions
+under which the flaws and possible improvements of the Networking APIs, in
+particular the standard Socket API, should take place.  These were the
+following two basic assumptions:
+
+\begin{itemize}
+
+\item The \textbf{currently deployed Internet architecture} is assumed.  New
+networking paradigms that would require completely new functionalities of the
+Networking-API - are out-of-scope, e.g.: information centric / content based
+networking, delay-tolerant networking, vehicular networking.
+
+\item Specific requirements of \textbf{IoT are not considered} in the
+discussion since the IoT devices have very specific requirements, i.e.
+regarding energy-efficiency, so that the Socket API is often not applicable/is
+not being used. If Socket API is used in an IoT device, energy-consumption is
+not a problem since sending consumes much more energy than an inefficient
+implementation of the Socket API (e.g.  copying data from userland to
+kernelspace).
+
+\end{itemize}
+
+Afterwards, the discussion focussed on problems observed with the current
+APIs. For high performance networking applications with, e.g., thousands of
+TCP connections, the API does not scale well. Several work-arounds have been
+developed in order to cope with this inefficiency, e.g.  \emph{sendfile}
+(directly copying from file descriptor to a socket without copying data to
+user-space) or  \emph{sendmessage} with zero-copying / zero-copy sockets (page
+re-mapping between kernel/user-space).  The importance of hardware-offloading
+has increased. However, several open questions remain: What functions should
+be performed in hardware?  Should the interface to the hardware be
+standardized?
+
+The current API is fine for most standard cases but it becomes a bottleneck
+for high performance applications: This is mainly caused by the effort of
+copying data, often caused by a not packet-oriented processing of data in the
+application (i.e. application sends stream of data, transport layer builds
+segments).  Again, workarounds have been developed, e.g. fast packet
+processing in userland or StackMap~\cite{mhonda:usenix:2016} + netmap
+framework~\cite{lrizzo:usenix:2012} (dedicated NIC for one application, etc.).
+
+This lead to a discussion of desirable properties of a networking API.
+Mentioned were the isolation of networking-stack and application, energy
+efficiency (mobile applications) and high performance and scalability (data
+center applications).
+
+Possible solution ideas which were identified during the breakout were the
+application of dedicated I/O CPUs, integration of GPGPU processing and
+networking (offloading on GPU), packetized processing of data in the
+application, and several techniques that could reduce the processing-overhead
+in kernel, e.g. avoid queuing of TCP ACK packets or reducing the overhead of a
+system call. Due to the limited time, a detailed discussion of the suitability
+of theses approaches would need to be done in a follow-up discussion.
+Furthermore, two talks on the second day of the retreat presented additional
+information on related subjects: Michio Honda (see~\autoref{mhonda}) presented
+information on persistence in networking (redesigning stack, API and networks)
+and Florian Westphal (see~\autoref{fwestphal}) talked about current
+developments regarding the Linux networking stack.
