@@ -113,5 +113,13 @@ middleboxes in addition to improving networked storage systems.
 
 %-- Florian Westphal
 \subsection{State of Linux Network Development} \label{fwestphal}
-$--$ Florian Westphal
 
+Florian Westphal (Redhat) gave a brief summary of recent and ongoing
+development work in the linux kernel network stack, such as NIC hardware
+offloads (switching, routing, IPsec, TLS) and \ac{XDP}.  After an overview of
+enhancements of linux TCP stack, such as BBR congestion
+control~\cite{ncardwell:cacm:2017} and RACK loss
+detection~\cite{draft-ietf-tcpm-rack} current development efforts were
+presented.  This includes an extension of the BSD socket API to provide a full
+zero-copy interface, making qdiscs lockless and a planned removal of the IPv6
+\ac{FIB} reader-writer lock.
