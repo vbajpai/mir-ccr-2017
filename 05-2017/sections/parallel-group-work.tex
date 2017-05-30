@@ -98,12 +98,20 @@ subjects issues~\cite{fbai:infocom:2003}.
 
 P4~\cite{pbosshart:ccr:2014} is a language that allows to program the
 structural layout of protocol headers, as well as, processing operations
-performed on those.  This allows to perform matching on arbitrary fields of
-even completely new protocols, in contrast to for instance OpenFlow with few
-predefined fields.  The breakout session aims to first define the
-functionality and potential use cases of P4.  Then, potential
-extensions~\cite{abhashkumar:sosr:2017} for functionality that might be
-desired, but are not yet supported or even intended by P4 will covered.
+performed on those.  As use cases discussed in this breakout session, P4 as
+extension for OpenFlow, which is limited by the fields that can be matched on,
+was discussed first. The second sample discussed was P4 when used for packet
+inspection on a switch. Complex protocol stacks (e.g. VXLAN) can be parsed on
+ingress, de-capsulating the then to be inspected payload, before the packet is
+de-parsed on the egress path again. Thereby, headers can be dropped or new
+ones added.  The second topic discussed was possible extensions to P4, which
+are required to perform common data-center operations. The prime example is
+scheduling, required for time sensitive protocols (e.g. various IEEE 802.1
+standards), as well as offering Quality of Service guarantees.  Lastly, a
+brief discussion of recent
+activity~\cite{abhashkumar:sosr:2017,dang:sosr:2017,asivaraman:sigcomm:2016}
+in the field of P4 was held, resulting in the exchange of new interesting
+papers.
 
 %-- Hannes
 \subsection{IoT and security}
