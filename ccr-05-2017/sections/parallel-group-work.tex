@@ -1,0 +1,174 @@
+%**************************************************************************
+\section{Parallel Group Work}\label{sec:parallel-group-work}
+%**************************************************************************
+
+The afternoon sessions were used to discuss selected topics in more depth in
+smaller groups. This section summarizes the discussions of each group.
+
+% -------------
+
+%-- Holger Kinkelin
+%-- Severin Kacianka
+\subsection{distributed ledgers + distributed Internet + empowering people}
+
+%-- Quirin and Vaibhav
+\subsection{Measurements and Reproducibility}
+
+% LPK: \emph{Participants:} \textbf{Vaibhav Bajpai, Georg Carle, Edwin
+% Cordeiro, Ljubica Pajević Kärkkäinen, Simon Leinen, Johannes Naab, Stefan
+% Neumeier, Quirin Scheitle, Ermias Walelgne}
+
+%In the present day, however, we are building systems and technology that
+%permit human everyday lives and therefore, inherently are dealing with
+%various, sensitive data about people and technical aspects of their privacy.
+
+%This framework allows implementation of a number of privacy-preserving
+%protocols for aggregating network statistics.  LPK: {From slides: "Also, some
+%notable datasets got de-anonymized". Citation for this?}
+
+%\subsubsection{Publishing datasets and privacy issues}
+%\subsubsection{Methods reproducibility}
+%\subsubsection{Incentives for more open research}
+%\subsubsection{Possible solutions for the lack of reproducibility}
+%\subsubsection{Learning from practice in other fields}
+
+Computer science and engineering community has traditionally been less
+oriented towards providing reproducible
+research~\cite{vbajpai:reproducibility:2017, qscheitle:reproducibility:2017}
+and more about quickly publishing novel and promising results. In this group,
+we discussed the current state and possible directions for improving the state
+of reproducibility.
+
+The discussion began with questions regarding user privacy and sharing
+sensitive (network traffic, user identities, location, et al.) data since both
+legal and ethical concerns often inhibit data sharing. The first step that
+must be taken is data anonymization, which is difficult, sometimes
+computationally demanding and furthermore, it may only work for a specific
+research question. Once the data is sufficiently cleared of sensitive
+information and prepared for publication, long-term planning for storing large
+amounts of data is necessary.  Additionally, even when there is willingness to
+take the necessary steps and enrich the research community by providing
+collected data, the risk of a certain party's intentional de-anonymization
+always remains. Actions that can be taken to enable more reproducible research
+were also discussed. For instance, Burkhart~\cite{burkhart2011thesis} explores
+cryptographic alternatives to data anonymization. Specifically, he revisits
+applying secure multiparty computation (MPC) to the problem of aggregating
+network data from multiple domains and develops a new framework with MPC
+operations for processing high volume data in near real-time.
+
+Without the detailed methodology, much of a reproduction efforts remain
+guesswork. A detailed description is essential since it serves to validate
+others' work; not providing enough information about the methods used, for
+example regarding data processing, can cast a serious doubt on the methodology
+and any of the results.  Provision of all the steps of the applied methodology
+also assists other practitioners and enables faster progress of research.
+
+From the author's perspective, there is a disbalance between the efforts to
+prepare reproducible results and the potential reward. Since publications with
+novel measurement data and/or methodologies are likely to get more citations,
+for many authors the citation count is seen as a strong enough incentive.
+Reproducers find it even less rewarding since replicating others' results is
+time-consuming and receives little recognition. Although many conference call
+for papers express the need by explicitly asking for papers that reproduce
+previous work, there is currently little acceptance of reproduction papers:
+most of the studies -- if ever materialize into a submission -- get filtered
+out in the peer review round (due to the lack of novelty). Furthermore,
+rebuttal papers on previously published results are often subjected to
+rejection.
+
+Instead of using very specific datasets for examining algorithm and protocol
+performance, having benchmark datasets could be one part of the solution.
+However, in this case the question that emerged was how we actually build
+suitable datasets for different applications and use-cases.  The other action
+item would be to promote awareness that the current practices do not
+completely follow the scientific approach. This may be achieved by organizing
+more workshops with the focus primarily on reproducible research and
+validation of previous results, or by tweaking the reviewing process to
+encourage more openness.
+
+We also discussed what can we learn from other fields where validation of
+results through replication has been an essential component. One of the
+examples with very high requirements for validation is in physics, where
+numerous teams work simultaneously on the same dataset and evaluate core
+models from many angles. However, this field deals with zero privacy and human
+subjects issues~\cite{fbai:infocom:2003}.
+
+%-- Dominik Scholz
+\subsection{P4 and SDN}
+
+P4~\cite{pbosshart:ccr:2014} is a language that allows to program the
+structural layout of protocol headers, as well as, processing operations
+performed on those.  This allows to perform matching on arbitrary fields of
+even completely new protocols, in contrast to for instance OpenFlow with few
+predefined fields.  The breakout session aims to first define the
+functionality and potential use cases of P4.  Then, potential
+extensions~\cite{abhashkumar:sosr:2017} for functionality that might be
+desired, but are not yet supported or even intended by P4 will covered.
+
+%-- Hannes
+\subsection{IoT and security}
+
+Firmware updates~\cite{philips, hp} changing behaviour of the device.
+
+%-- Lars Wischoff
+\subsection{Networking APIs}
+%\subsection{regulatory issues} -- merged
+
+The first phase in the discussion of the group was to define the assumptions
+under which the flaws and possible improvements of the Networking APIs, in
+particular the standard Socket API, should take place.  These were the
+following two basic assumptions:
+
+\begin{itemize}
+
+\item The \textbf{currently deployed Internet architecture} is assumed.  New
+networking paradigms that would require completely new functionalities of the
+Networking-API - are out-of-scope, e.g.: information centric / content based
+networking, delay-tolerant networking, vehicular networking.
+
+\item Specific requirements of \textbf{IoT are not considered} in the
+discussion since the IoT devices have very specific requirements, i.e.
+regarding energy-efficiency, so that the Socket API is often not applicable/is
+not being used. If Socket API is used in an IoT device, energy-consumption is
+not a problem since sending consumes much more energy than an inefficient
+implementation of the Socket API (e.g.  copying data from userland to
+kernelspace).
+
+\end{itemize}
+
+Afterwards, the discussion focussed on problems observed with the current
+APIs. For high performance networking applications with, e.g., thousands of
+TCP connections, the API does not scale well. Several work-arounds have been
+developed in order to cope with this inefficiency, e.g.  \emph{sendfile}
+(directly copying from file descriptor to a socket without copying data to
+user-space) or  \emph{sendmessage} with zero-copying / zero-copy sockets (page
+re-mapping between kernel/user-space).  The importance of hardware-offloading
+has increased. However, several open questions remain: What functions should
+be performed in hardware?  Should the interface to the hardware be
+standardized?
+
+The current API is fine for most standard cases but it becomes a bottleneck
+for high performance applications: This is mainly caused by the effort of
+copying data, often caused by a not packet-oriented processing of data in the
+application (i.e. application sends stream of data, transport layer builds
+segments).  Again, workarounds have been developed, e.g. fast packet
+processing in userland or StackMap~\cite{mhonda:usenix:2016} + netmap
+framework~\cite{lrizzo:usenix:2012} (dedicated NIC for one application, etc.).
+
+This lead to a discussion of desirable properties of a networking API.
+Mentioned were the isolation of networking-stack and application, energy
+efficiency (mobile applications) and high performance and scalability (data
+center applications).
+
+Possible solution ideas which were identified during the breakout were the
+application of dedicated I/O CPUs, integration of GPGPU processing and
+networking (offloading on GPU), packetized processing of data in the
+application, and several techniques that could reduce the processing-overhead
+in kernel, e.g. avoid queuing of TCP ACK packets or reducing the overhead of a
+system call. Due to the limited time, a detailed discussion of the suitability
+of theses approaches would need to be done in a follow-up discussion.
+Furthermore, two talks on the second day of the retreat presented additional
+information on related subjects: Michio Honda (see~\autoref{mhonda}) presented
+information on persistence in networking (redesigning stack, API and networks)
+and Florian Westphal (see~\autoref{fwestphal}) talked about current
+developments regarding the Linux networking stack.

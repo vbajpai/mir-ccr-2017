@@ -1,0 +1,141 @@
+by Vaibhav
+==========
+
+-- topics:
+  -- mobile internet
+  -- P4
+  -- vehicle to X communition and related topics (QoS)
+  -- 5G
+  -- social levels aspects of the technology
+  -- systems community people
+  -- avoid curated IoT ecosystem (such as iOS store)
+  -- assessment of network security
+
+-- less time for talks x 2, more time for breakout session x 4
+
+-- confine breadth? -- No, hard to know upfront who is coming. It's about
+   people with expertise that come
+
+-- well done! -- controversial statements to start the discussion of a break
+   out session.
+
+-- have a talk identify high-level problems.
+
+-- poster session, breakouts, coffee breaks were good.
+
+-- reduce buzzword topics
+
+-- champion for the topic.
+
+-- abstract of the talk should be on the webpage before the seminar. Allow
+   possibility to share the posters upfront.
+
+-- smaller tables for dinner, name tags at dinner tables.
+
+-- have the posters in the same room, more time during the posters.
+
+-- industry and academia -- 50%
+
+-- more industry talks.
+
+-- have senior people in the breakout sessions drive discussions.
+
+-- 1st iteration was more interactive.
+
+
+by Teemu
+========
+
+- Topic: Edge computing and computational offloading.
+- Idea: Hands on tutorials, practical things to show.
+- Feedback: Prepare outbreak sessions better.
+- Topic: Distributed ledger.
+- Feedback: Provide topics for breakouts beforehand.
+- Topic: Mobile Internet.
+- Feedback: Preparation for breakout topics.
+- Feedback: Less time for talks, more time for breakouts.
+- Feedback: Talks did not follow a theme. More specific topic for the retreat?
+- Idea: Controversial statement to drive every breakout session.
+- Topic: Vehicle-to-X communications and related topics (e.g., QoS).
+- Feedback: Room acoustics.
+- Feedback: Shorter talks. Goal should be to discuss with people, not listen to talks. Intro session was fine.
+- Topic: No SDN topics.
+- Feedback: More practical problems from the field.
+- Feedback: Shift focus towards breakout sessions.
+- Topic: TCP logic in userspace, currently all-or-nothing. Offloading only parts of the TCP stack?
+- Feedback: Shorter talks, lightning talks. Need more breaks and time for people to talk with each other in between presentations.
+- Topic: No high-level buzzword topics, but concrete topics.
+- Feedback: More breakout sessions. At least two sessions.
+- Feedback: More systems community people.
+- Feedback: Breakout sessions should have a "champion" that creates slides and a talk (5 min) to set up the discussion.
+- Topic: Security in protocol design.
+- Feedback: Talk summaries (abstracts) beforehand.
+- Feedback: Poster could be shared beforehand. Not enough time for posters.
+- Feedback: Agenda/timing improvements.
+- Idea: Dagstuhl style dinner name tags.
+- Topic: Companies presenting what tech they have in the pipeline.
+- Feedback: More time for posters.
+- Feedback: Academia/industry split should be 50%/50%.
+- Feedback: Tutorials in addition to breakouts.
+- Feedback: Less time for talks.
+- Feedback: Need more time for posters.
+- Feedback: Two tracks/talks?
+- Feedback: More breakouts.
+- Topic: TCP userspace. High performance TCP processing.
+- Feedback: Poster sessions should serve one-to-one discussions -> more time.
+- Feedback: More breakout sessions. First one sparks discussion, but need more time to continue.
+- Feedback: More industry talks.
+- Idea: Have longer day 2?
+- Feedback: Room layout and acoustics are poor for collaboration.
+- Idea: Different layouts for the room to promote interactivity.
+- Feedback: Short talks are better for promoting questions.
+
+
+by Holger
+=========
+
+
+Intro session
+
+- Intro session / self-presentation is fine -> keep this on the agenda
+
+Breakout session
+
+- Preload people with info about outbreak sessions -> prepare the
+ discussion, etc.
+- Have a controversary statement that can be discussed in breakout
+ sessions
+- More time for breakout sessions, especially when we have the
+ opprotunity to prepare for this, less time for talks
+- Shorter talks, two breakout sessions
+- Industry shall outline a problem that can be discussed in a breakout
+ session
+- Focus on breakout sessions
+- More time for poster session
+- "Senior" people in Breakout session to bring in expertise / stear
+ discussion
+
+Poster session
+
+- Longer breaks or poster sessions would give opportunities to talk to
+ people
+- Have somebody prepare intro slides for breakout sessions as some kind
+ of tutorial, etc.
+- Posters should be in the same room as the talks
+
+Misc
+
+- Have a topic for the retreat, unfocussed
+- Hands-on tutorials
+- Have abstract of talks / posters some time before the event
+- Improve gender diversity
+- Enforce mixing of people by having place cards for dinner/lunch
+- More participation from industry
+- Two tracks
+- More time for posters, more time for breakout session
+- More industry talks
+- Methods to increase interactivity
+- Help people getting in touch before the event and collaboratively
+  prepare questions, etc.
+- Shorter talks would leave room for questions which maybe helps
+  getting people talking to each other

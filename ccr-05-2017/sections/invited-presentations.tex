@@ -1,0 +1,117 @@
+%**************************************************************************
+\section{Invited Presentations}\label{sec:invited-presentations}
+%**************************************************************************
+
+The invited presentations were intended as a basis for triggering discussions
+and identifying areas for group work.
+
+%-- Teemu Kärkkäinen
+\subsection{Opportunistic Content Dissemination}
+%\subsection{Opportunistic Content Dissemination Performance in Dense Network Segments}
+
+Many of the existing opportunistic networking systems have been designed
+assuming a small number links per node and have trouble scaling to large
+numbers of potential concurrent communication partners. In the real world we
+often find wireless local area networks with large numbers of connected users
+– in particular in open Wi-Fi networks provided by cities, airports,
+conferences and other venues. In this talk, Teemu Kärkkäinen (TU Munich)
+presented a 50 client opportunistic network in a single Wi-Fi access point and
+use it to uncover scaling problems and to suggest mechanisms to improve the
+performance of single segment dissemination. Further, we present an algorithm
+for breaking down a single dense segment dissemination problem into multiple
+smaller but identical problems by exploiting resource (e.g., Wi-Fi channel)
+diversity, and validate our approach via simulations and testbed experiments.
+The ability to scale to high density network segments creates new, realistic
+use cases for opportunistic networking applications.
+
+%-- Quirin Scheitle
+%\subsection{Push Away Your Privacy: Precise User Tracking Based on TLS Client Certificate Authentication} %(TMA'17) -- can scale to 15 to 25 min —
+\subsection{User Tracking Based on TLS CCA} %(TMA'17) -- can scale to 15 to 25 min —
+
+The design and implementation of cryptographic systems offer many subtle
+pitfalls. One such pitfall is that cryptography may create unique identifiers
+potentially usable to repeatedly and precisely re-identify and hence track
+users. Quirin Scheitle (Technical University of Munich) presented his investigation of TLS Client
+Certificate Authentication (CCA), which currently transmits certificates in
+plain text. He demonstrated~\cite{qscheitle:tma:2017} CCA’s impact on client
+traceability using Apple’s Apple Push Notification service (APNs) as an
+example. APNs is used by all Apple products, employs plain-text CCA, and aims
+to be constantly connected to its backend. Its novel combination of large
+device count, constant connections, device proximity to users and unique
+client certificates provides for precise client traceability. He shows that
+passive eavesdropping allows to precisely re-identify and track users and that
+only ten interception points are required to track more than 80 percent of
+APNs users due to global routing characteristics. The work was conducted under
+strong ethical guidelines, with responsibly disclosing the findings, and a
+working patch by Apple for the highlighted issue was confirmed. The aim for
+this work is to provide the necessary factual and quantified evidence about
+negative implications of plain-text CCA to boost deployment of encrypted CCA
+as in TLS 1.3.
+
+%-- Dirk Kutscher
+%\subsection{Tentatively: IoT Research Ideas}
+%$--$ Dirk Kutscher
+
+%-- Hagen Paul Pfeifer
+\subsection{Dynamic MultiPath Routing Protocol}
+
+Safety critical communication platforms often deploy multiple heterogeneous
+wireless link layer access technologies like ETSI TETRA, IEEE 802.11, IEEE
+802.15.4, 3GPP LTE, satellite terminals or proprietary waveforms.  Depending
+on the interface characteristics, vendor specific decisions and other aspects,
+these often come shipped with suitable mobile ad-hoc routing protocols to form
+networks in an autonomous manner - independently for each link type. 802.11
+links typically deploy OLSR, BATMAN or 802.11s, whereas proprietary waveforms
+often come with proprietary MANET protocols.  To bridge these access networks
+at a logically higher level and provide an opaque operational network view, a
+network routing protocol at the top is required. Exterior routing protocols
+like BGP are limited in their use and features like automatic neighbor
+detection or reduced message overhead are required. \ac{DMPR} tries to address
+these shortcomings and provides exterior routing protocol features for
+heterogeneous link layer environments even in low bandwidth environments.
+Furthermore, \ac{DMPR} features policy based routing to route traffic through
+different paths if required or advantageous.
+
+%-- Hannes Tschofenig
+\subsection{IoT Security: TrustZone for v8-M}
+
+\ac{IoT} devices today use microcontrollers that are limited in CPU
+performance, as well as in RAM and flash size. Many of these devices use the
+ARM A-class or M-class processors. A-class CPUs are able to run popular
+operating systems (OS), such as embedded Linux, while M-class CPUs use
+Real-Time Operating Systems. So far, the security functionality of M- and
+A-class CPUs has been very different.  A-class CPUs can use sophisticated
+hardware features, such as TrustZone offering physical separation between the
+normal and the secure world operating systems. M-class CPUs offer basic
+security protection using the memory protection unit (MPU), which offers
+memory isolation.  Many IoT products, however, use very few operating system
+security techniques, if they run an OS at all, and often do not make use of
+hardware security support. While the exact reasons for these design decisions
+remain unclear, the growing list of IoT security failures calls for improved
+protection capabilities.  With the introduction of the TrustZone for ARMv8-M
+architecture, security features known from the mobile world are now available
+in the \ac{IoT} environment. Additionally, ARM v8-A processors  enhance
+security with the Pointer Authentication Extension, which prevents
+return-oriented programming-based attacks.  In this talk Hannes will explain
+the hardware security features offered by upcoming ARM processors and
+microcontrollers.
+
+%-- Michio Honda
+%\subsection{Persistence in Networking: Redesigning Stack, API and Networks}
+\subsection{Redesigning Stack, API and Networks} \label{mhonda}
+
+Emerging \ac{NVMMs}, also known as storage-class memory and persistent memory
+push the majority of end-to-end latency that includes durable I/O to network
+stacks and their APIs.  This not only impairs inherent performance of
+\ac{NVMMs} that is one to two orders of magnitude faster than traditional
+persistent medias like \ac{SSDs}, but prevents systems from adopting them to
+be reliable with relative ease. Michio Honda (NEC) investigates towards
+solving this problem, designing an efficient network stack and its APIs, and
+exploring new opportunities in networking such as software switches and
+middleboxes in addition to improving networked storage systems.
+
+
+%-- Florian Westphal
+\subsection{State of Linux Network Development} \label{fwestphal}
+$--$ Florian Westphal
+

@@ -1,0 +1,99 @@
+-- Simon:
+
+make NetFlow data made available to researchers, but cannot be released due to
+privacy issues. Graduate course on reprodicing research was mentioned.
+
+-- Vaibhav
+
+lack of incentive to reproduce work.
+
+-- Ljubica and Edwin
+
+No means to persuade the community to reproduce research. When there is
+mismatch, reproducers are expected to show validation of mismatch with
+previous work which is much harder.
+
+-- Stefan
+
+Companies have non-disclosure agreements to not make data available.
+
+-- Johannes
+
+A large data repository is a first step, but not enough. Datasets are
+arbitrarily provided. @georg: ACM provides mechanism to upload digital objects
+with the paper.
+
+-- Ermias
+
+What about privacy aspects of sharing data? @georg mentiones a disseration on
+a related topic, @simon -- also research on deanonymization of data. EU
+projects (such as METRICS) require released datasets comply data protection
+rules. @georg -- privacy aspects cannot be solved by technology.
+
+-- Simon
+
+Storing large datasets with cloud providers (such as Amazon) is cheap and at
+times free, because providers can charge for computation on the data later.
+
+-- Ermias
+
+Ethical issues? CS culture has ignored ethical issues for a long time.
+
+-- Vaibhav
+
+How is reproducibility outside of CS? @georg -- physicist are generally more
+stringent with reproducibility. In situations of a mismatch, physicists look
+at the underlying core model to understand the reason of the mismatch. @stefan
+-- physicsts usually don't have a issue with users. @edwin -- how do folks
+doing genetic studies handling reproducibility?
+
+-- Quirin
+
+Three levels of reproducibility.
+
+-- Georg
+
+Incentive is getting citations on a reproducible research. Can we encourage
+authors to provide intermediate results. More valuable if you provide guidance
+to produce similar dataset.
+
+
+-- Johannes
+
+No incentive to reproduce work. @georg -- need a taxonomy of aspects of
+reproducibility.
+
+
+-- Simon
+
+PAM and IMC ask for papers that reproduce research. @Vaibhav -- Is it that
+papers that reproduce work do not get submitted or they get rejected? @quirin
+-- we have experience with papers that reproduced previous works getting
+rejected because of lack of novelty. we didn't notice a paper in the last PAM
+proceedings that had at least partial reproducibility.
+
+
+-- Ljubica
+
+Describing the methodology is more important
+
+-- Quirin and Johannes
+
+Perhaps a workshop colocated with SIGCOMM that solicits papers that reproduce
+research. What criterea should we use to accept papers that reproduce research?
+
+
+-- Georg
+
+I would argue we don't need 'papers' that reproduce 'existing' papers.
+
+-- Edwin
+
+The dataset may not be useful for all studies. @Vaibhav -- Authors should be
+encouraged to illustrate the limitations of the dataset.
+
+-- Ljubica
+
+How do we encourage reviewers to be check for reproducibility? @quirin --
+perhaps have a reproducibility shepard for accepted papers to ensure artifacts
+are made available.
