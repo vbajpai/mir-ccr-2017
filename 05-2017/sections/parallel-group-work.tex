@@ -108,7 +108,48 @@ desired, but are not yet supported or even intended by P4 will covered.
 %-- Hannes
 \subsection{IoT and security}
 
-Firmware updates~\cite{philips, hp} changing behaviour of the device.
+\ac{DDoS} attacks involving IP-based cameras have led to discussions about the
+impact of large numbers of unpatched \ac{IoT} devices. While the owners of the
+those devices may not see a need to update them, even if they are aware of
+their vulnerability, there is the risk of collateral damage for the Internet
+infrastructure as a whole. In the breakout session we collected concerns and
+listed challenges with IoT security in light of the possibility of such
+\ac{DDoS} attacks.
+
+The regulatory outreach possibility and whether firmware update functionality
+needs to be mandatory-to-support in an IoT product were disscussed. Since
+these firmware/software updates may, however, require user consent (or user
+action) the user needs to be contacted first. Definitely, user consent is
+required if the update does not only fix a security bug but is otherwise
+bundled with new features~\cite{philips, hp} that may impact the privacy
+settings or the features of the product. How users can be contacted is an area
+for further investigation, considering that \ac{IoT} devices may expose no
+user interface.  Furthermore, the role network operators could play in
+detecting and stopping attacks was explored. Relationships with work on botnet
+mitigation~\cite{rfc6561, rfc6108} by Comcast, a US cable operator, was drawn.
+In general, the idea of detecting attacks and mitigating them via network
+segmentation was attractive to various participants and the potential role of
+intermediaries, in the style of edge / fog computing, was discussed.  This
+lead to further questions concerning the potential increase in attack surface
+posed by these entities and the changes in the security architecture due to
+their introduction into the communication path.
+
+The group concluded the discussion with additional questions: What happens
+with those \ac{IoT} devices that cannot be patched or where the support has
+expired? Should unpatchable \ac{IoT} products be recalled? The car served as
+an example where a regulatory framework sets a requirement for recalls. As
+such, should there by an \ac{IoT} TUeV (MoT in UK), a term borrowed from the
+car industry where vehicles are tested for roadworthiness in regular
+intervals?  Who should pay for these services? What is the scope of the
+guarantee for consumers?  Should devices have a kill switch to disable them
+from being connected to the Internet? Should there be a regulatory requirement
+for \ac{IoT} device manufacturers, OEMs and service providers to inform users
+already at the time of purchase about the expiry date after which no further
+service will be available?
+
+Overall, the a large part of the discussion reflected feelings of the
+participants that a regulatory framework will be necessary to provide
+incentive to avoid collateral damage. Technical measures would then follow.
 
 %-- Lars Wischoff
 \subsection{Networking APIs}
