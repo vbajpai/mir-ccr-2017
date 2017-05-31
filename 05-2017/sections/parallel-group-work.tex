@@ -9,13 +9,39 @@ smaller groups. This section summarizes the discussions of each group.
 
 %-- Holger Kinkelin
 %-- Severin Kacianka
-\subsection{Use Cases of and Research on Blockchains and other Distributed Ledgers}
+\subsection{Use Cases of and Research on Blockchains and other Distributed
+Ledgers}
 
-Blockchains gained a lot of attention since the raise of the Bitcoin \cite{bitcoin} payment system. In essence, Blockchains can be understood as distributed database systems that offer their users unmodifiable and immutable storage for various types of application data. Today, Blockchains are typically used in the context of payment systems.
+Blockchains gained a lot of attention since the raise of the Bitcoin
+\cite{bitcoin} payment system. In essence, Blockchains can be understood as
+distributed database systems that offer their users unmodifiable and immutable
+storage for various types of application data. Today, Blockchains are typically
+used in the context of payment systems.
 
-In this breakout session, the participants discussed how Blockchain technology can be used to increase accountability in various scenarios: 1) The first scenario is network administration. Instead of pushing new configurations to devices, administrators might deposit configurations for devices in a Blockchain-like system. The configurations are then polled and applied automatically by devices. This approach would ensure that configuration changes by, for instance, rogue administrators trying to harm their employer could be detected. The outlined system could also be expanded with a feature that allows for multi-party approval of configurations to prevent hazardous (or erroneous) configurations. 2) Another scenario would be accountability for log data from autonomous systems. Examples include ``black box''-data of autonomous cars or drones. A trusted element might send a stream of status infromation to some kind of data center which uses Blockchain technology to persist the received information.
+In this breakout session, the participants discussed how Blockchain technology
+can be used to increase accountability in various scenarios: 1) The first
+scenario is network administration. Instead of pushing new configurations to
+devices, administrators might deposit configurations for devices in a
+Blockchain-like system. The configurations are then polled and applied
+automatically by devices. This approach would ensure that configuration changes
+by, for instance, rogue administrators trying to harm their employer could be
+detected. The outlined system could also be expanded with a feature that allows
+for multi-party approval of configurations to prevent hazardous (or erroneous)
+configurations. 2) Another scenario would be accountability for log data from
+autonomous systems. Examples include ``black box''-data of autonomous cars or
+drones. A trusted element might send a stream of status infromation to some kind
+of data center which uses Blockchain technology to persist the received
+information.
 
-Besides use cases for Blockchain-like systems, the participants discussed available technical implementations. One difficulty is that ``mining''-based (Proof-of-Work) \cite{hashcash} implementations cannot be used in (private) networks with modestly small numbers ($\sim$50--100) of Blockchain nodes \cite{dangerPBC}. Hence, different approaches to reach consensus in the network need to be employed. The participants exchanged their knowledge about existing implementations that are suitable in private networks. In the opinion of the participants, the Hyperledger system \cite{hyperledger} is one of the most promising contenders.
+Besides use cases for Blockchain-like systems, the participants discussed
+available technical implementations. One difficulty is that ``mining''-based
+(Proof-of-Work) \cite{hashcash} implementations cannot be used in (private)
+networks with modestly small numbers ($\sim$50--100) of Blockchain nodes
+\cite{dangerPBC}. Hence, different approaches to reach consensus in the network
+need to be employed. The participants exchanged their knowledge about existing
+implementations that are suitable in private networks. In the opinion of the
+participants, the Hyperledger system \cite{hyperledger} is one of the most
+promising contenders.
 
 %-- Quirin and Vaibhav
 \subsection{Measurements and Reproducibility}
