@@ -2,9 +2,10 @@
 \section{Overview on Selected Topics} \label{sec:content}
 %**************************************************************************
 
-The topics covered in MIR and the discussed : 
+In this section we want to provide a brief overview on the topics that were covered in invited talks, poster, or breakout sessions in the first two MIRRs.
 
-1. System Networking and Measurement [Vaibhav]
+
+\subsection{System Networking and Measurement [Vaibhav]}
 
 SDN, reproducibility etc.
 
@@ -15,24 +16,24 @@ Group discussion
 There are posters on this topic [ref to tech report and papers]
 
 
-2. IoT, ICN and Edge Computing [Aaron]
+\subsection{IoT, ICN and Edge Computing [Aaron]}
 
 One domain covered in MIRR is the intersection of IoT, Information-Centric
 Networking (ICN) and Edge Computing. There were three invited talks that triggered
-lively discussions. The invited talks include 
-``Edge Computing considered harmful" by Dirk Kutscher (Huawei), 
+lively discussions. The invited talks include
+``Edge Computing considered harmful" by Dirk Kutscher (Huawei),
 ``Open Platforms for Cyber-physical systems" by Christian Prehofer (fortiss),
 and ``Opportunistic Content Dissemination in Dense Network Segments"
-by Teemu Kärkkäinen (TU Munich). 
+by Teemu Kärkkäinen (TU Munich).
 
 Inspired by those talks, discussion groups
-have been formed to review the existing issues, open problems, and 
+have been formed to review the existing issues, open problems, and
 research directions. The identified problems include: 1) Limitation
 of existing protocols such as Constrained Application Protocol (CoAP) that
 handles poorly the frequent leaving/joining events in the network. 2) The
 stereotype of ``IoT gateway design'' has hindered novel design. 3) We still
 have not yet come up with a suitable Internet architecture that integrates
-IoT coherently. 
+IoT coherently.
 
 There are six open questions highlighted: 1) Where does the network
 end nowadays? This question couples
@@ -42,7 +43,7 @@ naming ``translation'' without changing name/label? 4) Can we do packet
 processing while it is passing through queue? 5) How to avoid looping in
 the network functions? This is a key concern since we need to keep a
 boundary for resource usage in the network. 6) How to maintain the state on
-the constrained nodes? 
+the constrained nodes?
 
 The discussion groups also identified a set of potential
 research directions: 1) Design of end-to-end naming scheme, to facilitate IoT
@@ -53,7 +54,7 @@ abstract suitable for IoT. 5) Abstract of distributed registry for network
 function. 6) Rethink how we distribute computing and content.
 
 Besides invited talks, MIRR also featured several posters on this topic, including
-``iConfig - What I See is What I Configure", 
+``iConfig - What I See is What I Configure",
 ``Fine-Grained Edge Offloading for IoT"~\cite{cozzolino:hotconnet:2017},
 ``Opportunistic Content Dissemination",
 ``Data Dissemination in Vehicular Networks",
@@ -61,10 +62,31 @@ Besides invited talks, MIRR also featured several posters on this topic, includi
 ``Car2X Lab", and ``Securebox"~\cite{hafeez:can:2016}.
 
 
-3. Security and Privacy [Holger]
+\subsection{Security and Privacy}
 
-Talks
+Topics around security and privacy formed the third thematic pillar of the MIRR. We covered topics spanning the full spectrum from hardware-related, to protocol-specific, to problems of and introduced by cloud computing.
 
-Group discussion
+%Talks
 
-There are posters on this topic [ref to tech report]
+In their talks
+``Digital Sovereignty in the Post-Snowden Era'' and
+``IoT Security: TrustZone for v8-M'' Alexander von Gernler (genua GmbH) and Hannes Tschofenig (ARM) motivated for hardware offering security features implemented in hardware resp. reported on the latest developments in the 8\textsuperscript{th} version of the ARM A- and M-class processors.
+
+Quirin Scheitle (TUM) presented his investigations on ``User Tracking Based on TLS Client Certificate Authentication''~\cite{qscheitle:tma:2017}. He explained that currently devices often transmit their certificates in plain text and demonstrated the impact of this problem on client traceability using the Apple Push Notification service  as an example.
+
+In his talk on ``Collaborative intrusion handling using the Blackboard-Pattern''~\cite{herold:iscs:2016}, Holger Kinkelin (TUM) presented an approach how the individual components of intrusion handling (intrusion detection, alert processing, intrusion response) can be better intertwined using a blackboard as an information broker between components.
+
+%Group discussion
+
+Inspired by Hannes Tschofenig's talk on ``IoT Security'', a breakout session was formed covering this topic. The participants collected their concerns about IoT security, in particular collateral damage caused by vulnerable IoT devices in the Internet, and listed challenges with IoT security and options for mitigation. This discussion included, for instance, mandatory firmware updates to close vulnerabilities from remote. This approach however is also problematic, as the update might introduce incompatibilities with running applications or might lead to data leaks harming user privacy.
+
+Another group discussed Blockchains and other types of distributed ledgers as foundation for security and privacy solutions. Based upon a distributed ledger, a trustworthy logging mechanisms could for instance be created that store information from autonomous systems (cars, planes, etc.) for post-mortem analyses in a non-mutable and non-modifiable manner. Another application example includes a ledger-based configuration distribution mechanism for systems of any kind, which could bring clear benefits namely accountability and transparency of configuration.
+
+A the third group we want to highlight discussed on cloud security. Companies own less physical hardware but lease  more and more virtual machines or services in the Cloud. Besides amplifying known problems in traditional fields like security, trust, verifiability, and privacy, the cloudification also brings entirely new questions and problems. One example are services that already utilize virtualization, for example, sandboxes that analyze malware. The nesting of virtualization will decrease performance and change visibility of the malware analyzer to the inspected malware.
+
+Besides highlighted talks and group discussions, security and privacy topics were also represented by following posters
+``Securebox - A Platform for Securing IoT Networks''~\cite{hafeez:s3:2015, hafeez:can:2016},
+posters highlighting ongoing research projects like ``SafeCloud''~\cite{safecloud},
+``AutoMon''~\cite{automon}, and
+``Towards an Information Model for Decentralized Anomaly Detection for DecADe''~\cite{decade} and finally
+``Research Directions in Internet Architecture and Security''~\cite{glra, mms, ipv6hitlist}.
