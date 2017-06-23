@@ -15,15 +15,54 @@ protocol development of QUIC, and network stack optimization.
 
 %Talks, place holder
 
-In the talk ``On software Network Management" by Artur, TBA
+In the talk ``On software Network Management" by Artur Hecker (Huawei), 
+he argued that
+the paradigm change brought by software networks does not suit well planning
+approaches for network dimensioning and design, including but not limited to
+planning or pre-provisioning of management and control planes. In contrast, he
+proposed a new model and protocol, aiming to autonomously
+bootstrap, construct, adjust and maintain control plane including the elastic
+placement of control compute nodes ~\cite{yliu:icc:2015} and control paths without
+presuming any particular network purpose.
 
-``FlexNets: Quantifying Flexibility in Communication Networks", TBA
+The talk by Wolfgang Kellerer (TUM) on ``FlexNets: Quantifying Flexibility in
+Communication Networks" proposed a definition for flexibility as a
+new measure for network design space analysis~\cite{wkellerer:infocom:2016}
+and gives an illustrative example with \ac{SDN} controller placement.
+The goal is to provide a deeper understanding of the
+flexibility vs.\ cost trade-off which is missing so far in networking research.
 
-``An Accidental Internet Architecture", TBA
+Brian Trammell (ETH Zürich) introduced PostSockets \cite{draft-trammell-post-sockets}
+in his talk on ``An Accidental Internet Architecture". The work-in-progress 
+proposal intended to allow applications to be developed separate from (possibly
+runtime-bound) transport protocol dynamics, in turn accelerating the
+deployment of recent innovations at Layer 4.
 
-``Measuring IPv6 performance"
+The talk on ``Measuring IPv6 performance", Vaibhav Bajpai (Jacobs University
+Bremen) presented his work using 80
+dual-stacked SamKnows~\cite{vbajpai:comst:2015} probes deployed at the edge of
+the network to measure IPv6 performance of operational dual-stacked content
+services on the Internet. The talk presented a comparison of how content delivery
+\cite{vbajpai:networking:2015, sahsan:pam:2015} over IPv6 compares to that of
+IPv4, and also identified glitches in this content
+delivery~\cite{seravuchira:cnsm:2016} that once fixed can help improve user
+experience over IPv6. The talks also pointed out areas of improvements
+\cite{vbajpai:anrw:2016} in the standards work for the IPv6 operations
+community at the IETF\@.
 
-``SWIFT: Predictive Fast Reroute upon Remote BGP Disruptions"
+%citations should be all done properly now :)
+
+In ``SWIFT: Predictive Fast Reroute upon Remote BGP Disruptions",
+Laurent Vanbever (ETH Zurich) presented a general
+fast re-route framework supporting both local and remote failures. The framework
+SWIFT isbased on two novel techniques. First, SWIFT copes with slow notification by
+predicting the overall extent of a remote failure out of few control-plane
+(BGP) messages. Second, SWIFT introduces a new data-plane encoding scheme
+which enables it to quickly and flexibly update the impacted forwarding
+entries. The evaluation has shown that SWIFT is able to predict the extent of
+a remote failure with high accuracy (93\%) and SWIFT encoding scheme enables
+to fast-converge more than 95\% of the impacted forwarding entries. Overall,
+SWIFT reduces the average convergence time from few minutes to few seconds.
 
 ``Dynamic MultiPath Routing Protocol"
 
@@ -81,14 +120,32 @@ Quantifying Flexibility in Networks
 
 The second theme covered in MIRR is the intersection of IoT, Information-Centric
 Networking (ICN) and Edge Computing. There were three invited talks that triggered
-lively discussions. In the talk ``Edge Computing considered harmful" by Dirk
-Kutscher (Huawei), TBA.
+lively discussions. 
+
+In the talk ``Edge Computing considered harmful" by Dirk
+Kutscher (Huawei), he challenged the mainstream notion of running
+application-specific VMs at the network edge and discussed the related
+security/privacy issues. He argued that low latency should be first-order
+general requirement and will point at corresponding network and
+transport layer approaches.
 
 The talk ``Open Platforms for Cyber-physical systems" by Christian Prehofer (fortiss)
-addresses a timely topic, TBA.
+illustrated a timely trend towards open systems
+which can be extended during operation by instantly adding functionalities on
+demand. He presented results of the
+TAPPlications (Trusted Applications for open CPS) project~\cite{prehofer:eitec:2016},
+which includes trusted hardware and
+virtualization of networking and CPU, as well as dedicated execution
+environments and development support for trusted applications.
 
-Teemu Kärkkäinen (TU Munich) presented his findings on ``Opportunistic Content
-Dissemination in Dense Network Segments". TBA
+Teemu Kärkkäinen (TU Munich) presented in ``Opportunistic Content
+Dissemination in Dense Network Segments" a 50 client opportunistic network in
+a single Wi-Fi access point and use it to uncover scaling problems and to suggest
+mechanisms to improve the performance of single segment dissemination. He further
+proposed an algorithm for breaking down a single dense segment dissemination
+problem into multiple smaller but identical problems by exploiting resource 
+(e.g., Wi-Fi channel) diversity, and validate our approach via simulations and
+testbed experiments.
 
 Inspired by those talks, discussion groups on IoT, ICN and Edge Computing
 have been formed to review the existing issues, open problems, and
