@@ -71,53 +71,75 @@ heterogeneous link layer environments even in low bandwidth environments.
 different paths if required or advantageous.
 
 In their talks ``Persistence in Networking: Redesigning Stack, API and Networks"
-and ``State of Linux Network Development", 
+and ``State of Linux Network Development", Michio Honda (NEC) and 
+Florian Westphal (Redhat) highlighted the existing status of kernel
+development and the demand for more efficient network stack and
+its APIs. Their talks illusrated new opportunities in networking such as software
+switches, NIC hardware offloading, extension of the BSD socket API to 
+provide a full zero-copy interface and improvement of networked
+storage systems.
 
 %Group discussion, place holder
 
-SDN/NFV Measurements and Applications Perspective
+Focusing on networking aspects, the discussion group
+on ``SDN/NFV Measurements and Applications Perspective"
+stressed the importance of performance evaluation for virtualized networks and
+SDN networks. As measurements should be conducted on software platforms as well
+as real networks, testbeds need to be built that include
+commodity servers, making use of accelerated network cards via
+\ac{DPDK}, networking functions in software (e.g., functions running in docker
+containers, orchestration tools for virtual environments).
+Besides system perspective, the discussion group also illustrated the perspective
+of how to apply SDN, and how to introduce improvements to SDN 
+for better meeting the identified requirements. 
 
-QUIC development
 
-Measurements and Reproducibility
+The group on ``QUIC Development" discussed how
+the \ac{IETF} should approach the information encrypted in the QUIC
+packets in respect to its availability to legitimate network management or firewall
+functions. The session also went into retrospect on historical protocol
+innovations that failed to get widely deployed and reflect on how to enable
+smooth transitions of future protocol innovations. The group also
+discussed the role of operator networks by remaining opaque to
+designers of network protocols, and additional large-scale
+measurement initiatives that help bring visibility into how current network
+operate in practice would be useful for protocol innovation.
 
-P4 and SDN
 
-Networking APIs
+The discussion group ``Measurements and Reproducibility" pointed out 
+a challenging issue in networking community where there is an inbalance between
+quickly publishing novel results and providing reproducible
+research~\cite{vbajpai:reproducibility:2017, qscheitle:reproducibility:2017}.
+The group rised questions regarding user privacy and sharing
+sensitive (network traffic, user identities, location, et al.) data since both
+legal and ethical concerns often inhibit data sharing, and current state and
+possible directions for improving the state of reproducibility.
+Besides methodology, the group also discussed what can we learn from other fields
+where validation of results through replication has been an essential component.
 
+
+The group session on ``Networking APIs" focused on the assumption and problems
+observed with the current APIs. The group first defined the assumptions
+under which the flaws and possible improvements of the Networking APIs, in
+particular the standard Socket API, should take place.
+This led to a discussion of desirable properties of a networking API.
+Mentioned were the isolation of networking-stack and application, energy
+efficiency (mobile applications) and high performance and scalability (data
+center applications).
 
 %Posters, place holders
 
 Following active discussions, on-going work has been presented in 
 several posters, including 
-
-Cost of Security in the SDN Control Plane
-
-The Baltikum Testbed
-
-FlexNets
-
-Boost Virtual Network Resource Allocation
-
-HyperFlex
-
-SarDiNe
-
-StackMap
-
-PATHspider
-
-PASTE: A Networking Interface for NVMMs
-
-Real-time TE in the Internet
-
-Center ofAutomotiveResearch on Integrated Safety Systems
-and Measurement Area (CARISSMA)
-
-Project SENDATE
-
-Quantifying Flexibility in Networks
-
+``Cost of Security in the SDN Control Plane", ``The Baltikum Testbed",
+``FlexNets", ``Boost Virtual Network Resource Allocation",
+``HyperFlex", ``SarDiNe", ``StackMap", ``PATHspider",
+``PASTE: A Networking Interface for NVMMs",
+``Real-time TE in the Internet",
+``Center ofAutomotiveResearch on Integrated Safety Systems
+and Measurement Area (CARISSMA)",
+``Project SENDATE", and
+``Quantifying Flexibility in Networks".
 
 \subsection{IoT, ICN and Edge Computing}
 
@@ -224,7 +246,7 @@ the Internet, and listed challenges with IoT security and options for
 mitigation. This discussion included, for instance, mandatory firmware updates
 to close vulnerabilities from remote. This approach however is also problematic,
 as the update might introduce incompatibilities with running applications or
-might lead to data leaks harming user privacy.
+might lead to data leaks harming user privacy \cite{Haus:CST2017}.
 
 Another group discussed Blockchains and other types of distributed ledgers as
 foundation for security and privacy solutions. Based upon a distributed ledger,
